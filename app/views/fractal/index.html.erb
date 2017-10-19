@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>A Lovely Maze</title>
+</head>
+<style>
+
+    body {
+        background-image: url(/assets/Fractals/<%= @individual %>.png);
+        background-size: cover;
+        background-repeat: no-repeat; 
+        background-attachment: fixed;
+        background-position: center;
+        -webkit-transition: background-image .3s;
+        -moz-transition:    background-image .3s;
+        -ms-transition:     background-image .3s;
+        -o-transition:      background-image .3s;
+        transition:         background-image .3s;
+        color: #FFAAAA;
+        text-align: center;
+        font-size: 20px;
+    }
+
+</style>
+
+<body>
+    
+    <% @data.each do |line| %>
+        <%= line %>
+        <br/>
+    <% end %>
+    
+    
+    
+<!-- 
+    <div style="color:#F00;">
+    <div style="font-size:3px; font-family: monospace; white-space: pre-wrap; ">
+
+        
+    </div>
+    </div>
+-->
+</body>
+</html>
