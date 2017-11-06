@@ -1,0 +1,97 @@
+<script type="text/javascript"> 
+  function activateTab(tabID) {
+      var ids = ["tab1", "tab2", "tab3", "tab4", "tab5"]
+      for (var i = 0; i < ids.length; i ++){
+          document.getElementById(ids[i]).style.opacity = 0;
+      }
+      document.getElementById(ids[(parseInt(tabID, 10) - 1)]).style.opacity = 1;
+  }
+</script>
+
+<div class="tab">
+            <a id="tabLink1" class="tablinks" href="javascript:activateTab('1')">Main</a>
+            <a id="tabLink2" class="tablinks" href="javascript:activateTab('2')">Pottery</a>
+            <a id="tabLink3" class="tablinks" href="javascript:activateTab('3')">Errata</a>
+            <a id="tabLink4" class="tablinks" href="javascript:activateTab('4')">Calculator</a>
+            <a id="tabLink7" class="tablinks" href="javascript:activateTab('5')">FAQ</a>
+        </div>
+<div style="position:relative">
+            <div id="tab1" style="opacity: 1; position:absolute; width:100%" class="tabCtrl">
+                <h1>Hi!  <br/>Welcome to my website!<br/></h1>
+                <p class="standard_text">
+                I've got eleven other styles to choose,
+                <br/>
+                a store for my pottery,
+                <br/>
+                a page for interesting facts and links,
+                <br/>
+                and a base calculator!
+                </p>
+            </div>
+            <div id="tab2" style="opacity: 0; position:absolute; width:100%;" class="tabCtrl">
+                <br/><br/><br/>
+                <p class="standard_text">
+                    
+                My pottery website contains some of my best work,
+                <br/>
+                sorted by general styles, colors, and prices.
+                <br/>
+                It's even connected to paypal for easier transactions!
+                </p>
+                
+            </div>
+            <div id="tab3" style="opacity: 0; position:absolute; width:100%;" class="tabCtrl">
+                <br/><br/><br/>
+                <p class="standard_text">
+                    
+                I have also compiled a list of some of the most unusual facts in history,
+                <br/>
+                along with many puzzles, mysteries, brainteasers, and words.
+                </p>
+                <div class="smalltext">
+                    (with regards to Futility Closet)
+                </div>
+            </div>
+            <div id="tab4" style="opacity: 0; position:absolute; width:100%;" class="tabCtrl">
+            <br/><br/><br/>
+                <p class="standard_text">
+                    
+                My base calculator started life as a college final project,
+                <br/>
+                but later became one of my favorite creations.
+                <br/>
+                Enjoy its functions and marvel at how profoundly useless it is!
+                </p>
+                
+            </div>
+            <div id="tab5" style="opacity: 0; position:absolute; width:100%;" class="tabCtrl">
+            <br/><br/><br/>
+                
+                <ul>
+                    
+                    <li class="question"> Who made this?
+                        <ul>
+                            <li class="answer">
+                                Some random guy in college, idk.
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="question"> What is the purpose of this website?
+                        <ul>
+                            <li class="answer">
+                                To by my personal website.
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="question"> I heard something about quantum computer protection?
+                        <ul>
+                            <li class="answer">
+                                Well, buddy, just try and log in.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                
+            </div>
+            
+        </div>

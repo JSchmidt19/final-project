@@ -1,0 +1,144 @@
+div.myHeader{
+
+text-align: center;
+margin-top: 30px;
+
+}
+
+
+a.tablinks_major {
+border: outset;
+
+border-color: #0000FF;
+text-decoration: none;
+padding: 10px 20px;
+width: 150px;
+text-align: center;
+display: inline-block;
+font-size: 30px;
+
+font-weight:bold;
+color: #2222FF;
+background-color: #8888FF;
+
+}
+
+a.tablinks {
+    border: outset;
+
+border-color: #5555FF;
+text-decoration: none;
+padding: 7px 16px;
+width: 100px;
+text-align: center;
+display: inline-block;
+font-size: 20px;
+
+font-weight:bold;
+color: #7777FF;
+background-color: #CCCCFF;
+    
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+
+body {
+font-family: baskerville, Georgia, serif;
+background-color: #99D;
+text-align: center;
+}
+
+div.main {
+display: inline-block;
+text-align: center;
+background-color: #BBE;
+margin: 2.5%;
+font-weight:bold;
+height:900px;
+width: 80%;
+margin-bottom: 0;
+
+}
+div.tabCtrl {
+    width = 80%;
+    
+    -webkit-transition: opacity .5s ;
+    -moz-transition: opacity .5s;
+    -ms-transition: opacity .5s ;
+    -o-transition: opacity .5s ;
+     opacity: 1;
+}
+
+div.mainPart {
+font-style: oblique;
+text-align: center;
+background-color: #DDF;
+width: 80%;
+margin: auto;
+margin-top: 10px;
+padding: 20px;
+font-weight:bold;
+color: #00D
+
+}
+
+div.footer {
+    text-align:center;
+}
+
+p.standard_text {
+    font-size: 20px;
+
+}
+
+div.styles {
+    opacity: .8;
+    position:absolute;
+    padding:5px;
+    display:block;
+    float:right;
+    width: 10%;
+    background-color: #449;
+    margin-top: 20%;
+    margin-left: 86%;
+}
+
+a.styles {
+    border: outset;
+
+border-color: #5555FF;
+text-decoration: none;
+padding: 7px 16px;
+width: 100px;
+text-align: center;
+display: inline-block;
+font-size: 20px;
+
+font-weight:bold;
+color: #44F;
+background-color: #88B;
+}
+
+div.smalltext {
+    font-size: 10px;
+}
+
+ul  {
+ padding-left:0;   
+}
+ul li  {
+ list-style-position:inside
+}
+
+ul li.question {
+    font-size: 30px;
+    padding: 10px;
+    color: #009;
+}
+
+ul li.answer {
+    color: #00D;
+    font-size: 20px;
+    padding: 5px;
+}

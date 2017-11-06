@@ -1,3 +1,21 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+    
+    before_filter :set_default_style
+
+    def set_default_style
+        if session.has_key?(:visited_before)
+            
+        else
+          session[:visited_before] = true
+            params[:style] = 1
+            session[:style] = 1
+        end
+        session[:style] = params[:style]
+        @style = session[:style]
+        
+        @url = request.original_url[0..request.original_url.rindex("/")-1]
+    end
+    
+    
 end
