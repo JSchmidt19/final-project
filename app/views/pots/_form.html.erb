@@ -1,0 +1,57 @@
+<%= form_for(pot) do |f| %>
+  <% if pot.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pot.errors.count, "error") %> prohibited this pot from being saved:</h2>
+
+      <ul>
+      <% pot.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :pot_id %>
+    <%= f.text_field :pot_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :price %>
+    <%= f.text_field :price %>
+  </div>
+
+  <div class="field">
+    <%= f.label :size %>
+    <%= f.text_field :size %>
+  </div>
+
+  <div class="field">
+    <%= f.label :color %>
+    <%= f.text_field :color %>
+  </div>
+
+  <div class="field">
+    <%= f.label :style %>
+    <%= f.text_field :style %>
+  </div>
+
+  <div class="field">
+    <%= f.label :glazes %>
+    <%= f.text_field :glazes %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

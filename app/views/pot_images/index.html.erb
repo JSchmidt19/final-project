@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pot Images</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pot</th>
+      <th>Image url</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pot_images.each do |pot_image| %>
+      <tr>
+        <td><%= pot_image.pot.title %></td>
+        <td><%= image_tag pot_image.image_url :class => "pot_image"%></td>
+        <td><%= link_to 'Show', pot_image %></td>
+        <td><%= link_to 'Edit', edit_pot_image_path(pot_image) %></td>
+        <td><%= link_to 'Destroy', pot_image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pot Image', new_pot_image_path %>

@@ -1,0 +1,2 @@
+module PotImagesHelper
+end

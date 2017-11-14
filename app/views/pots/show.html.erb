@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pot:</strong>
+  <%= @pot.pot_id %>
+</p>
+
+<p>
+  <strong>Pictures:</strong>
+  <% @imageList.each do |img| %>
+    <%= image_tag img.image_url %>
+    <% end %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @pot.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @pot.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @pot.price %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @pot.size %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @pot.color %>
+</p>
+
+<p>
+  <strong>Style:</strong>
+  <%= @pot.style %>
+</p>
+
+<p>
+  <strong>Glazes:</strong>
+  <%= @pot.glazes %>
+</p>
+
+<%= link_to 'Edit', edit_pot_path(@pot) %> |
+<%= link_to 'Back', pots_path %>

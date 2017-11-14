@@ -14,7 +14,15 @@ class ApplicationController < ActionController::Base
         session[:style] = params[:style]
         @style = session[:style]
         
-        @url = request.original_url[0..request.original_url.rindex("/")-1]
+         @url = request.original_url
+        
+        if @url.match(%r|/\d|)
+            @url = request.original_url[0..(request.original_url =~ %r|/\d|)- 1]
+        elsif @url =~ %r|/\d\d|
+            @url = request.original_url[request.original_url =~ %r|/\d\d|..-2]
+        else 
+            @url = request.original_url[0..-2]
+        end
     end
     
     

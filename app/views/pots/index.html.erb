@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pots</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pot</th>
+        <th>Image</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Size</th>
+      <th>Color</th>
+      <th>Style</th>
+      <th>Glazes</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pots.each do |pot| %>
+      <tr>
+        <td><%= pot.pot_id %></td>
+          
+         <td><%= image_tag @imageList[pot.id].image_url %></td>
+
+        <td><%= pot.title %></td>
+        <td><%= pot.description %></td>
+        <td><%= pot.price %></td>
+        <td><%= pot.size %></td>
+        <td><%= pot.color %></td>
+        <td><%= pot.style %></td>
+        <td><%= pot.glazes %></td>
+        <td><%= link_to 'Show', show_pot_style_path(pot, @style) %></td>
+        <td><%= link_to 'Edit', edit_pot_style_path(pot) %></td>
+        <td><%= link_to 'Destroy', pot, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pot', new_pot_path %>

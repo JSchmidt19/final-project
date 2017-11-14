@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pot: one
+  image_url: MyString
+
+two:
+  pot: two
+  image_url: MyString

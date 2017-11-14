@@ -1,2 +1,38 @@
 <h1>Calculator#index</h1>
 <p>Find me in app/views/calculator/index.html.erb</p>
+
+<%= base(40, 89, 72, 3) %>
+
+<!--
+
+<%= form_tag do %>
+<%= label_tag(:value, "Value:") %>
+  <%= text_field_tag(:value) %>
+<br>
+<%= label_tag(:inBase, "Input Base:") %>
+  <%= text_field_tag(:inBase) %>
+<br>
+<%= label_tag(:outBase, "Output Base:") %>
+  <%= text_field_tag(:outBase) %>
+<br>
+
+<%= radio_button_tag(:alpha, "1") %>
+<%= label_tag(:alpha_1, "A-Z") %>
+<%= radio_button_tag(:alpha, "2") %>
+<%= label_tag(:alpha_2, "A-Za-z") %>
+<br>
+  <%= button_tag("Calculate") %>
+<% end %>
+
+-->
+
+<%= form_for :calculator, url: { action: :new }, method: :get do |f|   %>
+  <%= number_field_tag :a, params[:a] %>
+  <%= select_tag :operation, options_for_select([['+', :sum], ['-',    :subtr]], params[:operation]) %>
+  <%= number_field_tag :b, params[:b] %>
+  <%= f.submit 'Calculate!' %>
+<% end %>
+
+<% unless @result.nil? %>
+  <p> = <%= @result %> </p>
+<% end %>

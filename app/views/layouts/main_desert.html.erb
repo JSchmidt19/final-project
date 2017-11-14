@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Main (desert mode)</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'desert', media: 'all', 'data-turbolinks-track': 'reload' %>
+      
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+    
+    
+    
+    
+   
+    
+    <div class="styles">
+        <div class="importantText">
+            Themes:
+        </div>
+        <%= link_to 'Plain', "#{@url}/1", :class => "styles"%>
+        <br/>
+        <%= link_to 'Water', "#{@url}/2", :class => "styles"%>
+        <br/>
+        <%= link_to 'Fire', "#{@url}/3", :class => "styles"%>
+        <br/>
+        <%= link_to 'Forest', "#{@url}/4", :class => "styles"%>
+        <br/>
+        <%= link_to 'Celestial', "#{@url}/5", :class => "styles"%>
+        <br/>
+        <%= link_to 'Ice', "#{@url}/6", :class => "styles"%>
+        <br/>
+        <%= link_to 'Desert', "#{@url}/7", :class => "styles"%>
+        <br/>
+        <%= link_to 'Sunset', "#{@url}/8", :class => "styles"%>
+        <br/>
+        <%= link_to 'Steampunk', "#{@url}/9", :class => "styles"%>
+        <br/>
+        <%= link_to 'Dark', "#{@url}/10", :class => "styles"%>
+        <br/>
+        <%= link_to 'Crystal', "#{@url}/11", :class => "styles"%>
+        <br/>
+        <%= link_to 'SCP', "#{@url}/12", :class => "styles"%>
+        <br/>
+    </div>
+
+  <body style="width:100%; margin:0px; padding:0px">
+    <div class="main">
+    <div class="myHeader" >
+        <div id="headerImage" style="display: block" width="80%" height="200px">
+            <%= link_to image_tag("/assets/mainplain.jpg"), index_path(@style) %>
+                
+        </div>
+        <div class="tab">
+            <%= link_to 'About', about_path(@style), :class => "tablinks_major"%>
+            <%= link_to 'Contact', contact_path(@style), :class => "tablinks_major" %>
+            <%= link_to 'Calculator', calculator_path(@style), :class => "tablinks_major" %>
+            
+        </div>
+    </div> 
+      <div class="mainPart">
+
+    <%= yield %>
+           </div>
+        
+      </div>
+      <div class="footer">
+          <%= link_to 'Login', :action=>"login", :controller=>"main", :style=>@style  %>
+      </div>
+  </body>
+</html>

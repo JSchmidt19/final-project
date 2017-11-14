@@ -55,14 +55,14 @@ text-align: center;
 background-color: #BBE;
 margin: 2.5%;
 font-weight:bold;
-height:900px;
+min-height:900px;
 width: 80%;
 margin-bottom: 0;
-
+ 
 }
 div.tabCtrl {
     width = 80%;
-    
+    color: #009;
     -webkit-transition: opacity .5s ;
     -moz-transition: opacity .5s;
     -ms-transition: opacity .5s ;
@@ -80,16 +80,26 @@ margin-top: 10px;
 padding: 20px;
 font-weight:bold;
 color: #00D
-
+    min-height:100%;
+    margin-bottom:0%;
 }
 
 div.footer {
     text-align:center;
+    position: relative;
+    display:block;
 }
 
 p.standard_text {
     font-size: 20px;
+    color: #009;
+    line-height: 25px;
+}
 
+div.standard_text {
+    font-size: 20px;
+    color: #009;
+    line-height: 25px;
 }
 
 div.styles {
@@ -135,10 +145,32 @@ ul li.question {
     font-size: 30px;
     padding: 10px;
     color: #009;
+        line-height: 30px;
 }
 
 ul li.answer {
     color: #00D;
     font-size: 20px;
     padding: 5px;
+}
+
+div.leftalign {
+    float: left;
+    margin-left:2%;
+}
+
+div.rightalign {
+    float: right;
+    margin-right:2%;
+}
+
+div.importantText {
+    font-size: 20px;
+    font-weight: bold;
+    font-style: oblique;
+    color: #66F;
+    margin: 5px;
+}
+a:link { 
+    text-decoration:none !important;
 }

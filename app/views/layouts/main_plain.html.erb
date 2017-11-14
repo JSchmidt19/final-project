@@ -16,36 +16,39 @@
    
     
     <div class="styles">
+        <div class="importantText">
+            Themes:
+        </div>
         <%= link_to 'Plain', "#{@url}/1", :class => "styles"%>
         <br/>
-        <%= link_to 'Plain', "#{@url}/2", :class => "styles"%>
+        <%= link_to 'Water', "#{@url}/2", :class => "styles"%>
         <br/>
-        <%= link_to 'Plain', "#{@url}/3", :class => "styles"%>
+        <%= link_to 'Fire', "#{@url}/3", :class => "styles"%>
         <br/>
-        <%= link_to 'Plain', "#{@url}/4", :class => "styles"%>
+        <%= link_to 'Forest', "#{@url}/4", :class => "styles"%>
         <br/>
-        <%= link_to 'Plain', "#{@url}/5", :class => "styles"%>
+        <%= link_to 'Celestial', "#{@url}/5", :class => "styles"%>
         <br/>
-        <%= link_to 'Plain', "#{@url}/6", :class => "styles"%>
+        <%= link_to 'Ice', "#{@url}/6", :class => "styles"%>
         <br/>
-        <%= link_to 'Plain', "#{@url}/7", :class => "styles"%>
+        <%= link_to 'Desert', "#{@url}/7", :class => "styles"%>
         <br/>
-        <%= link_to 'Plain', "#{@url}/8", :class => "styles"%>
+        <%= link_to 'Sunset', "#{@url}/8", :class => "styles"%>
         <br/>
-        <%= link_to 'Plain', "#{@url}/9", :class => "styles"%>
+        <%= link_to 'Steampunk', "#{@url}/9", :class => "styles"%>
         <br/>
-        <%= link_to 'Plain', "#{@url}/10", :class => "styles"%>
+        <%= link_to 'Dark', "#{@url}/10", :class => "styles"%>
         <br/>
-        <%= link_to 'Plain', "#{@url}/11", :class => "styles"%>
+        <%= link_to 'Crystal', "#{@url}/11", :class => "styles"%>
         <br/>
-        <%= link_to 'Plain', "#{@url}/12", :class => "styles"%>
+        <%= link_to 'SCP', "#{@url}/12", :class => "styles"%>
         <br/>
     </div>
 
-  <body style="width:100%; height:100%; margin:0px; padding:0px">
+  <body style="width:100%; margin:0px; padding:0px">
     <div class="main">
     <div class="myHeader" >
-        <div id="headerImage" style="display: block" width="80%" height="200px">
+        <div id="headerImage" style="display: block" width="80%" height="100%" text-decoration="none";>
             <%= link_to image_tag("/assets/mainplain.jpg"), index_path(@style) %>
                 
         </div>
@@ -53,6 +56,8 @@
             <%= link_to 'About', about_path(@style), :class => "tablinks_major"%>
             <%= link_to 'Contact', contact_path(@style), :class => "tablinks_major" %>
             <%= link_to 'Calculator', calculator_path(@style), :class => "tablinks_major" %>
+            <%= link_to 'Pottery', pottery_path(@style), :class => "tablinks_major" %>
+            <%= link_to 'Errata', errata_path(@style), :class => "tablinks_major" %>
             
         </div>
     </div> 
@@ -63,7 +68,7 @@
         
       </div>
       <div class="footer">
-          <%= link_to 'Login', :action=>"login", :controller=>"main", :style=>@style  %>
+          <%= link_to 'Login', login_path(@style) %>
       </div>
   </body>
 </html>

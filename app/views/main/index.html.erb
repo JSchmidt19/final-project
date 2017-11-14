@@ -3,10 +3,23 @@
       var ids = ["tab1", "tab2", "tab3", "tab4", "tab5"]
       for (var i = 0; i < ids.length; i ++){
           document.getElementById(ids[i]).style.opacity = 0;
+          document.getElementById(ids[i]).style.position = "absolute";
+          document.getElementById(ids[i]).style.visibility = 'hidden';
+
+          
+
       }
+      
+      document.getElementById(ids[(parseInt(tabID, 10) - 1)]).style.position = "relative";
       document.getElementById(ids[(parseInt(tabID, 10) - 1)]).style.opacity = 1;
+      document.getElementById(ids[(parseInt(tabID, 10) - 1)]).style.visibility = 'visible';
+
+
+
+      
   }
 </script>
+<div>
 
 <div class="tab">
             <a id="tabLink1" class="tablinks" href="javascript:activateTab('1')">Main</a>
@@ -15,8 +28,8 @@
             <a id="tabLink4" class="tablinks" href="javascript:activateTab('4')">Calculator</a>
             <a id="tabLink7" class="tablinks" href="javascript:activateTab('5')">FAQ</a>
         </div>
-<div style="position:relative">
-            <div id="tab1" style="opacity: 1; position:absolute; width:100%" class="tabCtrl">
+<div style="position:relative; overflow: hidden;">
+            <div id="tab1" style="opacity: 1; position:relative; width:100%; display:block" class="tabCtrl">
                 <h1>Hi!  <br/>Welcome to my website!<br/></h1>
                 <p class="standard_text">
                 I've got eleven other styles to choose,
@@ -28,8 +41,7 @@
                 and a base calculator!
                 </p>
             </div>
-            <div id="tab2" style="opacity: 0; position:absolute; width:100%;" class="tabCtrl">
-                <br/><br/><br/>
+            <div id="tab2" style="opacity: 0; position:absolute; width:100%;; display:block" class="tabCtrl">
                 <p class="standard_text">
                     
                 My pottery website contains some of my best work,
@@ -40,8 +52,7 @@
                 </p>
                 
             </div>
-            <div id="tab3" style="opacity: 0; position:absolute; width:100%;" class="tabCtrl">
-                <br/><br/><br/>
+            <div id="tab3" style="opacity: 0; position:absolute; width:100%;; display:block" class="tabCtrl">
                 <p class="standard_text">
                     
                 I have also compiled a list of some of the most unusual facts in history,
@@ -52,8 +63,7 @@
                     (with regards to Futility Closet)
                 </div>
             </div>
-            <div id="tab4" style="opacity: 0; position:absolute; width:100%;" class="tabCtrl">
-            <br/><br/><br/>
+            <div id="tab4" style="opacity: 0; position:absolute; width:100%;; display:block" class="tabCtrl">
                 <p class="standard_text">
                     
                 My base calculator started life as a college final project,
@@ -64,8 +74,7 @@
                 </p>
                 
             </div>
-            <div id="tab5" style="opacity: 0; position:absolute; width:100%;" class="tabCtrl">
-            <br/><br/><br/>
+            <div id="tab5" style="opacity: 0; position:absolute; width:100%;; display:block" class="tabCtrl">
                 
                 <ul>
                     
@@ -79,7 +88,7 @@
                     <li class="question"> What is the purpose of this website?
                         <ul>
                             <li class="answer">
-                                To by my personal website.
+                                To be my personal website.
                             </li>
                         </ul>
                     </li>
@@ -95,3 +104,5 @@
             </div>
             
         </div>
+    
+</div>
