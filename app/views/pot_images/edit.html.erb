@@ -2,5 +2,5 @@
 
 <%= render 'form', pot_image: @pot_image %>
 
-<%= link_to 'Show', @pot_image %> |
-<%= link_to 'Back', pot_images_path %>
+<%= link_to 'Show', show_pot_image_style_path(@pot_image, @style) %> |
+<%= link_to 'Back', pot_images_style_path(@style) %>

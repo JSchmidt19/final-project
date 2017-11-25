@@ -4,25 +4,48 @@ class PotsController < ApplicationController
     
   before_action :set_pot, only: [:show, :edit, :update, :destroy]
     
-     
-    
-   layout :resolve_layout
+ layout :resolve_layout
 
   # GET /pots
   # GET /pots.json
   def index
+      
     @pots = Pot.all
       @imageList = Hash.new
       @pots.each do |pot|
-          @imageList[pot.id] = PotImage.where(pot_id: pot.pot_id).take
+          @imageList[pot.id] = PotImage.where(pot_id: pot.id).take
+          if @imageList[pot.id] == nil
+              @imageList[pot.id] = PotImage.where(pot_id: 1).take
+          end
       end
+      
+      @pots = @pots.reverse
           
   end
+    
+    def search 
+        
+        @all = Pot.all
+        @pots = []
+      @imageList = Hash.new
+      @all.each do |pot|
+          
+          if (check_pot(pot))
+              @pots.push(pot)
+              @imageList[pot.id] = PotImage.where(pot_id: pot.id).take
+              if @imageList[pot.id] == nil
+                  @imageList[pot.id] = PotImage.take
+              end
+          end
+      end
+        @pots = @pots.reverse
+        render action: "index"
+    end
 
   # GET /pots/1
   # GET /pots/1.json
   def show
-      @imageList = PotImage.where(pot_id: @pot.pot_id)
+      @imageList = PotImage.where(pot_id: @pot.id)
   end
 
   # GET /pots/new
@@ -41,7 +64,7 @@ class PotsController < ApplicationController
 
     respond_to do |format|
       if @pot.save
-        format.html { redirect_to @pot, notice: 'Pot was successfully created.' }
+        format.html { redirect_to "/pots/#{session[:style]}"}
         format.json { render :show, status: :created, location: @pot }
       else
         format.html { render :new }
@@ -55,7 +78,7 @@ class PotsController < ApplicationController
   def update
     respond_to do |format|
       if @pot.update(pot_params)
-        format.html { redirect_to @pot, notice: 'Pot was successfully updated.' }
+        format.html { redirect_to "/pots/#{session[:style]}" }
         format.json { render :show, status: :ok, location: @pot }
       else
         format.html { render :edit }
@@ -69,7 +92,7 @@ class PotsController < ApplicationController
   def destroy
     @pot.destroy
     respond_to do |format|
-      format.html { redirect_to pots_url, notice: 'Pot was successfully destroyed.' }
+      format.html { redirect_to "/pots/#{session[:style]}" }
       format.json { head :no_content }
     end
   end
@@ -82,8 +105,55 @@ class PotsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pot_params
-      params.require(:pot).permit(:pot_id, :title, :description, :price, :size, :color, :style, :glazes)
-        params.require(:style)
+      params.require(:pot).permit(:pot_id, :title, :description, :price, :size, :color, :style, :glazes, pot_image_attributes: [:image])
+    end
+        
+        
+    def check_pot(pot)
+        
+        if (params[:minprice] != "")
+            if pot.price.to_f < params[:minprice].to_f
+                return false
+            end
+        end
+        if (params[:maxprice] != "")
+            if pot.price.to_f > params[:maxprice].to_f
+                return false
+            end
+        end
+        if (params[:size] != "")
+            if !pot.size.include? params[:size]
+                return false
+            end
+        end
+        if (params[:color] != "")
+            if !pot.color.include? params[:color]
+                return false
+            end
+        end
+        if (params[:tech] != "")
+            if !pot.style.include? params[:tech]
+                return false
+            end
+        end
+        if (params[:glaze] != "")
+            if !pot.glazes.include? params[:glaze]
+                return false
+            end
+        end
+        if (params[:title] != "")
+            if !pot.title.include? params[:title]
+                return false
+            end
+        end
+        if (params[:desc] != "")
+            if !pot.description.include? params[:desc]
+                return false
+            end
+        end
+        
+        
+        return true
     end
     
     def resolve_layout
@@ -116,5 +186,5 @@ class PotsController < ApplicationController
      else 
         return  "main_plain"
     end
-  end
+    end
 end

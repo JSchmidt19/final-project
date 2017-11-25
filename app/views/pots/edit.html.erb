@@ -2,5 +2,5 @@
 
 <%= render 'form', pot: @pot %>
 
-<%= link_to 'Show', @pot %> |
-<%= link_to 'Back', pots_path %>
+<%= link_to 'Show', show_pot_style_path(@pot, @style) %> |
+<%= link_to 'Back', pottery_path(@style) %>

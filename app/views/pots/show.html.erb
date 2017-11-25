@@ -1,51 +1,72 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Pot:</strong>
-  <%= @pot.pot_id %>
-</p>
 
-<p>
-  <strong>Pictures:</strong>
-  <% @imageList.each do |img| %>
-    <%= image_tag img.image_url %>
-    <% end %>
-</p>
 
-<p>
-  <strong>Title:</strong>
+<div class="secondHeader">
   <%= @pot.title %>
-</p>
+</div>
 
-<p>
-  <strong>Description:</strong>
+
+
+<div class="boxed">
+        
+
+  <% @imageList.each do |pot_image| %>
+
+        <%= image_tag pot_image.image_url, :class => "pot_image"%>
+    <br>
+       <%= link_to 'Show', show_pot_image_style_path(pot_image, @style) %> |
+        <%= link_to 'Edit', edit_pot_image_style_path(pot_image, @style) %> |
+        <%= link_to 'Destroy', pot_image, method: :delete, data: { confirm: 'Are you sure?' } %>
+<br>
+    <% end %>
+
+
+
+<div class="standard_text">
+  <div class="boxed"><div class="boxed">
+      
+    
   <%= @pot.description %>
-</p>
+      </div>
+     
 
-<p>
+
   <strong>Price:</strong>
   <%= @pot.price %>
-</p>
 
-<p>
+<br>
+<br>
+
   <strong>Size:</strong>
   <%= @pot.size %>
-</p>
 
-<p>
+<br>
+<br>
+
+
   <strong>Color:</strong>
   <%= @pot.color %>
-</p>
 
-<p>
+<br>
+<br>
+
+
   <strong>Style:</strong>
   <%= @pot.style %>
-</p>
 
-<p>
+<br>
+<br>
+
+
   <strong>Glazes:</strong>
   <%= @pot.glazes %>
-</p>
+<br>
+<br>
 
-<%= link_to 'Edit', edit_pot_path(@pot) %> |
-<%= link_to 'Back', pots_path %>
+    </div>
+    </div>
+
+<%= link_to 'Edit', edit_pot_style_path(@pot, @style) %> |
+<%= link_to 'Add Image', add_pot_image_path(@pot, @style)%>
+    </div>

@@ -1,45 +1,63 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Pots</h1>
+<div class="secondHeader">
+    Essorant Pottery
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Pot</th>
-        <th>Image</th>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Price</th>
-      <th>Size</th>
-      <th>Color</th>
-      <th>Style</th>
-      <th>Glazes</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<br>
+<br>
 
-  <tbody>
+<div class="leftalign", style="position:absolute; left: 0%">
+<div class="searchbar">
+    <div class="standard_text", style="display: block">
+ <%= form_for :pots, url: { action: :search }, method: :get do |f|   %>
+  Min Price: <%= number_field_tag :minprice, params[:minprice], class:  "searchoption" %>
+   <br><br>Max Price: <%= number_field_tag :maxprice, params[:maxprice], class:  "searchoption"  %>
+  <br> <br>Size: <%= select_tag :size, options_for_select(["", "Tiny", "Small", "Rather Small", "Medium", "Rather Large", "Large", "Giant"], params[:size]), class:  "searchoption"  %>
+   <br><br>Color: <%= select_tag :color, options_for_select(["", "Red", "Blue", "Green", "Yellow", "Brown", "White", "Black", "Pink", "Purple", "Orange", "Other"], params[:color]), class:  "searchoption"  %>
+   <br><br>Style: <%= select_tag :tech, options_for_select(["", "Bowl", "Aberrant", "Rippled", "Plate", "Extruder", "Other"], params[:tech]), class:  "searchoption"  %>
+<br><br> Glaze Used: <%= text_field_tag :glaze, params[:glaze], class:  "searchoption"  %>
+<br><br> Title Like: <%= text_field_tag :title, params[:title], class:  "searchoption"  %>
+<br><br> Description Like: <%= text_field_tag :desc, params[:desc], class:  "searchoption"  %>
+
+    <br>
+
+  <%= f.submit 'Search!', class:  "searchoption"   %>
+<% end %>
+    </div>
+</div>
+</div>
+
+
     <% @pots.each do |pot| %>
-      <tr>
-        <td><%= pot.pot_id %></td>
-          
-         <td><%= image_tag @imageList[pot.id].image_url %></td>
+      
+      <div class="boxed">
+          <div class="pottery_title"><%= link_to pot.title, show_pot_style_path(pot, @style) %></div>
+      <br>
+          <%= link_to (image_tag @imageList[pot.id].image_url, :class => "list_image"), show_pot_style_path(pot, @style) %>
+          <div class="standard_text">
+          <div class="boxed">
+              
 
-        <td><%= pot.title %></td>
-        <td><%= pot.description %></td>
-        <td><%= pot.price %></td>
-        <td><%= pot.size %></td>
-        <td><%= pot.color %></td>
-        <td><%= pot.style %></td>
-        <td><%= pot.glazes %></td>
-        <td><%= link_to 'Show', show_pot_style_path(pot, @style) %></td>
-        <td><%= link_to 'Edit', edit_pot_style_path(pot) %></td>
-        <td><%= link_to 'Destroy', pot, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+          
+              <%= pot.description %>
+              </div>
+        Price: <%= pot.price %><br>
+        Size: <%= pot.size %><br>
+        Main color: <%= pot.color %><br>
+        Style: <%= pot.style %><br>
+        Glazes used: <%= pot.glazes %><br>
+        </div>
+          <br><br>
+<div class="factOptions">
+    
+          
+        
+        <%= link_to 'Edit', edit_pot_style_path(pot, @style) %>
+        <%= link_to 'Destroy', pot, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+          </div>
     <% end %>
-  </tbody>
-</table>
 
 <br>
 
-<%= link_to 'New Pot', new_pot_path %>
+<%= link_to 'New Pot', new_pot_style_path(@style) %>

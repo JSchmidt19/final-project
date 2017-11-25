@@ -16,5 +16,5 @@
 <%= raw @fact.body %>
 </p>
 
-<%= link_to 'Edit', edit_fact_path(@fact) %> |
-<%= link_to 'Back', facts_path %>
+<%= link_to 'Edit', edit_fact_style_path(@fact, @style) %> |
+<%= link_to 'Back', errata_path(@style) %>

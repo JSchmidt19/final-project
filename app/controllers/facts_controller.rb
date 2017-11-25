@@ -28,7 +28,7 @@ layout :resolve_layout
 
     respond_to do |format|
       if @fact.save
-        format.html { redirect_to @fact, notice: 'Fact was successfully created.' }
+        format.html { redirect_to "/facts/#{session[:style]}"}
         format.json { render :show, status: :created, location: @fact }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ layout :resolve_layout
   def update
     respond_to do |format|
       if @fact.update(fact_params)
-        format.html { redirect_to @fact, notice: 'Fact was successfully updated.' }
+        format.html { redirect_to "/facts/#{session[:style]}"}
         format.json { render :show, status: :ok, location: @fact }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ layout :resolve_layout
   def destroy
     @fact.destroy
     respond_to do |format|
-      format.html { redirect_to facts_url, notice: 'Fact was successfully destroyed.' }
+      format.html { redirect_to "/facts/#{session[:style]}"}
       format.json { head :no_content }
     end
   end

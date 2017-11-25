@@ -2,13 +2,12 @@
 
 <p>
   <strong>Pot:</strong>
-  <%= @pot_image.pot %>
+  <%= @pot_image.pot %>:  <%= @pot_image.pot.title %>
 </p>
 
 <p>
-  <strong>Image url:</strong>
-  <%= @pot_image.image_url %>
+  <%= image_tag @pot_image.image_url %>
 </p>
 
-<%= link_to 'Edit', edit_pot_image_path(@pot_image) %> |
-<%= link_to 'Back', pot_images_path %>
+<%= link_to 'Edit', show_pot_image_style_path(@pot_image, @style) %> |
+<%= link_to 'Back', pot_images_style_path(@style) %>

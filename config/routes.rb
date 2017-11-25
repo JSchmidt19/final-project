@@ -1,12 +1,25 @@
 Rails.application.routes.draw do
     
     
+    
     get '/pots/:style' => 'pots#index', as: 'pottery', constraints: { style: /[0-9]+/ }
         
     get '/pots/:id/:style' => 'pots#show', as: 'show_pot_style', constraints: {style: /[0-9]+/, id: /[0-9]+/}
     get '/pots/edit/:id/:style' => 'pots#edit', as: 'edit_pot_style', constraints: {style: /[0-9]+/, id: /[0-9]+/}
     
     get '/pots/new/:id/:style' => 'pots#new', as: 'new_pot_style', constraints: {style: /[0-9]+/, id: /[0-9]+/}
+    
+    
+    get '/pot_images/:style' => 'pot_images#index', as: 'pot_images_style', constraints: { style: /[0-9]+/ }
+        
+    get '/pot_images/:id/:style' => 'pot_images#show', as: 'show_pot_image_style', constraints: {style: /[0-9]+/, id: /[0-9]+/}
+    get '/pot_images/edit/:id/:style' => 'pot_images#edit', as: 'edit_pot_image_style', constraints: {style: /[0-9]+/, id: /[0-9]+/}
+    
+    get '/pot_images/new/:style' => 'pot_images#new', as: 'new_pot_image_style', constraints: {style: /[0-9]+/, id: /[0-9]+/}
+    get '/pot_images/add/:id/:style' => 'pot_images#add', as: 'add_pot_image', constraints: {style: /[0-9]+/, id: /[0-9]+/}
+    
+    
+    
 
     
     get '/facts/:style' => 'facts#index', as: 'errata', constraints: { style: /[0-9]+/ }
@@ -14,11 +27,13 @@ Rails.application.routes.draw do
     get '/facts/:id/:style' => 'facts#show', as: 'show_fact_style', constraints: {style: /[0-9]+/, id: /[0-9]+/}
     get '/facts/edit/:id/:style' => 'facts#edit', as: 'edit_fact_style', constraints: {style: /[0-9]+/, id: /[0-9]+/}
     
-    get '/facts/new/:id/:style' => 'facts#new', as: 'new_fact_style', constraints: {style: /[0-9]+/, id: /[0-9]+/}
+    get '/facts/new/:style' => 'facts#new', as: 'new_fact_style', constraints: {style: /[0-9]+/, id: /[0-9]+/}
     
   
     
     get 'calculator/new/:style' => 'calculator#new'
+    get 'pots/search/:style' => 'pots#search'
+    
     
     
     
@@ -32,6 +47,12 @@ Rails.application.routes.draw do
    get "main/login" => redirect("main/login/1"), as: 'redirect_login'
    get "fractal/index" => redirect("fractal/index/1"), as: 'redirect_fract_index'
    get "fractal/login" => redirect("fractal/login/1"), as: 'redirect_fract_login'
+    
+    
+    get "pots" => redirect("pots/1"), as: 'redirect_pot'
+    get "pot_images" => redirect("pot_images/1"), as: 'redirect_pot_image'
+    get "facts" => redirect("facts/1"), as: 'redirect_fact'
+    
 
     
     

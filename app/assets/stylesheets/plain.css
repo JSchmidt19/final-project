@@ -6,12 +6,54 @@ margin-top: 30px;
 }
 
 
+div.styles {
+    opacity: .8;
+    position:absolute;
+    padding:5px;
+    display:block;
+    float:right;
+    width: 10%;
+    background-color: #449;
+    margin-top: 20%;
+    margin-left: 86%;
+}
+
+a.styles {
+    border: groove;
+
+border-color: #5555FF;
+text-decoration: none;
+padding-top: 6px;
+padding-bottom: 6px;
+    padding-right: 30px;
+    padding-left: 15px;
+    
+width: 100px;
+text-align: center;
+display: inline-block;
+font-size: 20px;
+
+font-weight:bold;
+color: #44F;
+background-color: #88B;
+}
+
+a.styles:hover { 
+    background-color: #CCF;
+    -webkit-transition: background-color .2s ;
+    -moz-transition: background-color .2s;
+    -ms-transition: background-color .2s ;
+    -o-transition: background-color .2s ;
+}
+
+
 a.tablinks_major {
 border: outset;
 
 border-color: #0000FF;
 text-decoration: none;
-padding: 10px 20px;
+padding: 5px 10px;
+    padding-right: 15px;
 width: 150px;
 text-align: center;
 display: inline-block;
@@ -23,23 +65,39 @@ background-color: #8888FF;
 
 }
 
+a.tablinks_major:hover { 
+    background-color: #CCCCFF;
+    -webkit-transition: background-color .2s ;
+    -moz-transition: background-color .2s;
+    -ms-transition: background-color .2s ;
+    -o-transition: background-color .2s ;
+}
+
 a.tablinks {
     border: outset;
 
-border-color: #5555FF;
+border-color: #4444FF;
 text-decoration: none;
-padding: 7px 16px;
+padding: 7px 40px;
 width: 100px;
 text-align: center;
 display: inline-block;
 font-size: 20px;
 
 font-weight:bold;
-color: #7777FF;
+color: #5555FF;
 background-color: #CCCCFF;
     
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+a.tablinks:hover { 
+    background-color: #88A;
+    -webkit-transition: background-color .5s ;
+    -moz-transition: background-color .5s;
+    -ms-transition: background-color .5s ;
+    -o-transition: background-color .5s ;
 }
 
 
@@ -102,33 +160,7 @@ div.standard_text {
     line-height: 25px;
 }
 
-div.styles {
-    opacity: .8;
-    position:absolute;
-    padding:5px;
-    display:block;
-    float:right;
-    width: 10%;
-    background-color: #449;
-    margin-top: 20%;
-    margin-left: 86%;
-}
 
-a.styles {
-    border: outset;
-
-border-color: #5555FF;
-text-decoration: none;
-padding: 7px 16px;
-width: 100px;
-text-align: center;
-display: inline-block;
-font-size: 20px;
-
-font-weight:bold;
-color: #44F;
-background-color: #88B;
-}
 
 div.smalltext {
     font-size: 10px;
@@ -171,6 +203,125 @@ div.importantText {
     color: #66F;
     margin: 5px;
 }
-a:link { 
-    text-decoration:none !important;
+
+div.secondHeader {
+    font-size: 40px;
+    color: #00D;
+    padding: 10px;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-image: url("bluelines.jpg");
+        background-size: cover;
+        background-repeat: no-repeat; 
+        background-attachment: fixed;
+        background-position: center;
+}
+
+div.factTitle {
+    font-size: 20px;
+    color: #00F;
+}
+
+div.fact {
+    width: 90%; 
+    margin-left:5%;
+    margin-right:5%;
+    color: #00D
+}
+
+div.factOptions {
+    font-size: 10px;
+    padding-top: 10px;
+}
+
+div.bordered {
+    min-width: 50%;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: black;
+    padding: 1px;
+}
+
+div.hidden_text {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -ms-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #BBE;
+
+}
+div.hidden_text:hover{
+    opacity: 1;
+    
+}
+
+div.boxed {
+    border-style: groove;
+    border-width: 10px;
+    border-color: #3333DD99;
+    margin: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 5px;
+    padding-top: 0px;
+}
+
+div.field {
+    margin: 1%;
+    
+}
+
+.pot_image {
+    margin: 3%;
+    max-height: 80%;
+    max-width: 80%;
+}
+
+.list_image {
+    width: 40%;
+}
+
+div.pottery_title {
+    font-size: 30px;
+    
+}
+
+div.searchbar {
+    
+     border: groove;
+
+border-color: #5555FF;
+text-decoration: none;
+padding-top: 25px;
+padding-bottom: 25px;
+    padding-right: 30px;
+    padding-left: 15px;
+    opacity: .8;
+    position:fixed;
+    display:block;
+    float:right;
+margin-top: 2%;
+    background-color: #449;
+
+}
+
+a.searchbar:hover { 
+    background-color: #CCF;
+    -webkit-transition: background-color .2s ;
+    -moz-transition: background-color .2s;
+    -ms-transition: background-color .2s ;
+    -o-transition: background-color .2s ;
+}
+
+.searchoption {
+    background-color: #88D;
+    color: #00F;
+    font-weight: bold;
+    border-color: #00F;
 }

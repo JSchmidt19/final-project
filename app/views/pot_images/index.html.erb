@@ -15,9 +15,9 @@
     <% @pot_images.each do |pot_image| %>
       <tr>
         <td><%= pot_image.pot.title %></td>
-        <td><%= image_tag pot_image.image_url :class => "pot_image"%></td>
-        <td><%= link_to 'Show', pot_image %></td>
-        <td><%= link_to 'Edit', edit_pot_image_path(pot_image) %></td>
+        <td><%= image_tag pot_image.image_url, :class => "pot_image"%></td>
+        <td><%= link_to 'Show', show_pot_image_style_path(pot_image, @style) %></td>
+        <td><%= link_to 'Edit', edit_pot_image_style_path(pot_image, @style) %></td>
         <td><%= link_to 'Destroy', pot_image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Pot Image', new_pot_image_path %>
+<%= link_to 'New Pot Image', new_pot_image_style_path(@style)%>

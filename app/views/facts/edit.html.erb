@@ -2,5 +2,5 @@
 
 <%= render 'form', fact: @fact %>
 
-<%= link_to 'Show', @fact %> |
-<%= link_to 'Back', facts_path %>
+<%= link_to 'Show', show_fact_style_path(@fact, @style) %> |
+<%= link_to 'Back', errata_path(@style) %>
