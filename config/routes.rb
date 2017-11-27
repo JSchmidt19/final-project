@@ -32,7 +32,9 @@ Rails.application.routes.draw do
   
     
     get 'calculator/new/:style' => 'calculator#new'
-    get 'pots/search/:style' => 'pots#search'
+    get 'pots/search/:style' => 'pots#search'    
+    get 'facts/search/:style' => 'facts#search'
+
     
     
     

@@ -7,7 +7,7 @@
 <br>
 <br>
 
-<div class="leftalign", style="position:absolute; left: 0%">
+<div class="alignpot">
 <div class="searchbar">
     <div class="standard_text", style="display: block">
  <%= form_for :pots, url: { action: :search }, method: :get do |f|   %>
@@ -32,7 +32,7 @@
     <% @pots.each do |pot| %>
       
       <div class="boxed">
-          <div class="pottery_title"><%= link_to pot.title, show_pot_style_path(pot, @style) %></div>
+          <div class="pottery_title"><%= link_to pot.title, show_pot_style_path(pot, @style), :class => "pottery_title" %></div>
       <br>
           <%= link_to (image_tag @imageList[pot.id].image_url, :class => "list_image"), show_pot_style_path(pot, @style) %>
           <div class="standard_text">

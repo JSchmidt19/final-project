@@ -5,7 +5,22 @@ layout :resolve_layout
   # GET /facts.json
   def index
     @facts = Fact.all
+      @facts = @facts.reverse
   end
+    
+    def search 
+        
+        @all = Fact.all
+        @facts = []
+      @all.each do |fact|
+          
+          if (check_fact(fact))
+              @facts.push(fact)
+          end
+      end
+        @facts = @facts.reverse
+        render action: "index"
+    end
 
   # GET /facts/1
   # GET /facts/1.json
@@ -70,6 +85,155 @@ layout :resolve_layout
     # Never trust parameters from the scary internet, only allow the white list through.
     def fact_params
       params.require(:fact).permit(:title, :body, :fact_id)
+    end
+    
+    def check_fact(fact)
+        if (params[:art] == "1")
+            if !(fact.fact_id % 2 == 0)
+                return false
+            end
+        end
+        
+        if (params[:crime] == "1")
+            if !(fact.fact_id % 3 == 0)
+                return false
+            end
+        end
+        
+        if (params[:death] == "1")
+            if !(fact.fact_id % 5 == 0)
+                return false
+            end
+        end
+        
+        if (params[:entertainment] == "1")
+            if !(fact.fact_id % 7 == 0)
+                return false
+            end
+        end
+        
+        if (params[:history] == "1")
+            if !(fact.fact_id % 11 == 0)
+                return false
+            end
+        end
+        
+        if (params[:hoaxes] == "1")
+            if !(fact.fact_id % 13 == 0)
+                return false
+            end
+        end
+        
+        if (params[:humor] == "1")
+            if !(fact.fact_id % 17 == 0)
+                return false
+            end
+        end
+        
+        if (params[:language] == "1")
+            if !(fact.fact_id % 19 == 0)
+                return false
+            end
+        end
+        
+        if (params[:literature] == "1")
+            if !(fact.fact_id % 23 == 0)
+                return false
+            end
+        end
+        
+        if (params[:math] == "1")
+            if !(fact.fact_id % 29 == 0)
+                return false
+            end
+        end
+        
+        if (params[:music] == "1")
+            if !(fact.fact_id % 31 == 0)
+                return false
+            end
+        end
+        
+        if (params[:oddities] == "1")
+            if !(fact.fact_id % 37 == 0)
+                return false
+            end
+        end
+        
+        if (params[:poems] == "1")
+            if !(fact.fact_id % 41 == 0)
+                return false
+            end
+        end
+        
+        if (params[:puzzles] == "1")
+            if !(fact.fact_id % 43 == 0)
+                return false
+            end
+        end
+        
+        if (params[:quotations] == "1")
+            if !(fact.fact_id % 47 == 0)
+                return false
+            end
+        end
+        
+        if (params[:religion] == "1")
+            if !(fact.fact_id % 53 == 0)
+                return false
+            end
+        end
+        
+        if (params[:science] == "1")
+            if !(fact.fact_id % 59 == 0)
+                return false
+            end
+        end
+        
+        if (params[:society] == "1")
+            if !(fact.fact_id % 61 == 0)
+                return false
+            end
+        end
+        
+        if (params[:technology] == "1")
+            if !(fact.fact_id % 67 == 0)
+                return false
+            end
+        end
+        
+        if (params[:trivia] == "1")
+            if !(fact.fact_id % 71 == 0)
+                return false
+            end
+        end
+        
+        if (params[:favorites] == "1")
+            if !(fact.fact_id % 73 == 0)
+                return false
+            end
+        end
+        
+        if (params[:other] == "1")
+            if !(fact.fact_id % 79 == 0)
+                return false
+            end
+        end
+        
+        
+        if (params[:title] != "")
+            if !fact.title.include? params[:title]
+                return false
+            end
+        end
+        if (params[:desc] != "")
+            if !fact.body.include? params[:desc]
+                return false
+            end
+        end
+        
+        
+        return true
     end
     
     def resolve_layout

@@ -1,6 +1,43 @@
 <p id="notice"><%= notice %></p>
 
+<div class="alignfact">
+<div class="searchbarfact">
+    <div class="standard_text", style="display: block; ">
+ <%= form_for :facts, url: { action: :search }, method: :get do |f|   %>
+<br> Art: <%=  check_box_tag :art, 1, params[:art] == "1", class:  "searchoption"%>
+<br> Crime: <%=  check_box_tag :crime, 1, params[:crime] == "1", class:  "searchoption"  %>
+<br> Death: <%=  check_box_tag :death, 1, params[:death] == "1", class:  "searchoption"  %>
+<br> Entertainment: <%=  check_box_tag :entertainment, 1, params[:entertainment] == "1", class:  "searchoption"  %>
+<br> History: <%=  check_box_tag :history, 1, params[:history] == "1", class:  "searchoption"  %>
+<br> Hoaxes: <%=  check_box_tag :hoaxes, 1, params[:hoaxes] == "1", class:  "searchoption"  %>
+<br> Humor: <%=  check_box_tag :humor, 1, params[:humor],class:  "searchoption"  %>
+<br> Language: <%=  check_box_tag :language, 1, params[:language] == "1", class:  "searchoption"  %>
+<br> Literature: <%=  check_box_tag :literature, 1, params[:literature] == "1", class:  "searchoption"  %>
+        
+<br> Math: <%=  check_box_tag :math, 1, params[:math] == "1",class:  "searchoption"  %>
+        <br> Music: <%=  check_box_tag :music, 1, params[:music] == "1", class:  "searchoption"  %>
 
+<br> Oddities: <%=  check_box_tag :oddities, 1, params[:oddities] == "1",class:  "searchoption"  %>
+<br> Poems: <%=  check_box_tag :poems, 1, params[:poems] == "1", class:  "searchoption"  %>
+<br> Puzzles: <%=  check_box_tag :puzzles, 1, params[:puzzles] == "1", class:  "searchoption"  %>
+<br> Quotations: <%=  check_box_tag :quotations, 1, params[:quotations] == "1", class:  "searchoption"  %>
+<br> Religion: <%=  check_box_tag :religion, 1, params[:religion] == "1", class:  "searchoption"  %>
+<br> Science: <%=  check_box_tag :science, 1, params[:science] == "1",class:  "searchoption"  %>
+<br> Society: <%=  check_box_tag :society, 1, params[:society] == "1",class:  "searchoption"  %>
+<br> Technology: <%=  check_box_tag :technology, 1, params[:technology] == "1",class:  "searchoption"  %>
+<br> Trivia: <%=  check_box_tag :trivia, 1, params[:trivia] == "1",class:  "searchoption"  %>
+<br> Favorites: <%=  check_box_tag :favorites, 1, params[:favorites] == "1", class:  "searchoption"  %>
+<br> Other: <%=  check_box_tag :other, 1, params[:other] == "1",class:  "searchoption"  %>
+
+<br> Title Like: <%= text_field_tag :title, params[:title],  class:  "searchoption"  %>
+<br> Body Like: <%= text_field_tag :desc, params[:desc],  class:  "searchoption"  %>
+    <br>
+
+  <%= f.submit 'Search!', class:  "searchoption"   %>
+<% end %>
+    </div>
+</div>
+</div>
 <div class="secondHeader">
     Selcouthisms
 </div>
@@ -13,13 +50,12 @@
 
 <div class="boxed">
 <div class="factTitle">
-    <h2><%= fact.title %></h2>
+    <h2><%= link_to fact.title, show_fact_style_path(fact, @style), :class => "factTitle"%></h2>
 </div>
         
 <div style="fact"><%= raw fact.body %></div>
 
 <div class="factOptions">
-        <%= link_to 'Show', show_fact_style_path(@style, fact) %>  
         <%= link_to 'Edit', edit_fact_style_path(fact) %>  
         <%= link_to 'Destroy', fact, method: :delete, data: { confirm: 'Are you sure?' } %>  
     </div>

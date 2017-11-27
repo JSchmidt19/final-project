@@ -1,6 +1,11 @@
 <h1>Editing Fact</h1>
 
 <%= render 'form', fact: @fact %>
+<br>
+Art: 2, Crime: 3, Death: 5, Entertainment: 7, History: 11, Hoaxes: 13, <br>
+Humor: 17, Language: 19, Literature: 23, Math: 29, Music: 31, Oddities: 37, <br>
+Poems: 41, Puzzles: 43, Quotations: 47, Religion: 53, Science: 59, <br>
+Society: 61, Technology: 67, Trivia: 71, Favorites: 73, Other: 79<br>
 
 <%= link_to 'Show', show_fact_style_path(@fact, @style) %> |
 <%= link_to 'Back', errata_path(@style) %>

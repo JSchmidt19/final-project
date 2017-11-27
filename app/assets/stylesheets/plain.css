@@ -221,6 +221,15 @@ div.secondHeader {
 div.factTitle {
     font-size: 20px;
     color: #00F;
+    text-decoration: none;
+}
+
+a.factTitle {
+    text-decoration: none;
+}
+
+a.factTitle:visited {
+    color: #009;
 }
 
 div.fact {
@@ -264,7 +273,7 @@ div.hidden_text:hover{
 div.boxed {
     border-style: groove;
     border-width: 10px;
-    border-color: #3333DD99;
+    border-color: rgba(100,100,200,0.7);
     margin: 5%;
     margin-left: 10%;
     margin-right: 10%;
@@ -289,7 +298,15 @@ div.field {
 
 div.pottery_title {
     font-size: 30px;
-    
+    text-decoration: none;
+}
+
+a.pottery_title {
+    text-decoration: none;
+}
+
+a.pottery_title:visited {
+    color: #009;
 }
 
 div.searchbar {
@@ -319,9 +336,52 @@ a.searchbar:hover {
     -o-transition: background-color .2s ;
 }
 
+div.searchbarfact {
+    
+     border: groove;
+
+border-color: #5555FF;
+text-decoration: none;
+padding-top: 5px;
+padding-bottom: 5px;
+    padding-right: 30px;
+    padding-left: 15px;
+    opacity: .8;
+    width: 200px;
+    position:absolute;
+    display:block;
+    float:right;
+
+    background-color: #449;
+
+}
+
+a.searchbarfact:hover { 
+    background-color: #CCF;
+    -webkit-transition: background-color .2s ;
+    -moz-transition: background-color .2s;
+    -ms-transition: background-color .2s ;
+    -o-transition: background-color .2s ;
+}
+
 .searchoption {
     background-color: #88D;
     color: #00F;
     font-weight: bold;
     border-color: #00F;
+}
+
+div.alignfact {
+    position:absolute;
+    left: 0%;
+    float: left;
+    margin-left:2%;
+    top: 20%;
+}
+
+div.alignpot {
+    position:absolute;
+    left: 0%;
+    float: left;
+    margin-left:2%;
 }
