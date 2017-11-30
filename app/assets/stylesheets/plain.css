@@ -385,3 +385,30 @@ div.alignpot {
     float: left;
     margin-left:2%;
 }
+
+div.buyButton {
+
+}
+
+a.buyButton {
+    border: outset;
+border-radius: 50px;
+border-color: red;
+text-decoration: none;
+padding: 7px 40px;
+width: 100px;
+text-align: center;
+display: inline-block;
+font-size: 20px;
+
+font-weight:bold;
+color: red;
+background-color: #4400AA;
+    
+    margin-left: 1%;
+    margin-right: 1%;
+    
+    color: red;
+    text-decoration: none;
+    
+}

@@ -1,0 +1,31 @@
+<div class="secondHeader">
+    Essorant Pottery
+</div>
+
+<div class="standard_text">
+    
+
+<% if @pot != "" %>
+    <h1>Do you want this?</h1>
+
+
+<div class="boxed">
+          <div class="pottery_title"><%= link_to @pot.title, show_pot_style_path(@pot, @style), :class => "pottery_title" %></div>
+      <br>
+          <%= link_to (image_tag @image.image_url, :class => "list_image"), show_pot_style_path(@pot, @style) %>
+
+          </div>
+    
+    If so, <br><%= mail_to "selcouthinfomania@gmail.com", "email me" %>, <br>since I'm a student who can't afford Paypal's fee for proper support!
+<br>
+    <br>
+<% else %>
+        <h1>Do you want to buy something?</h1>
+
+    
+    If so, <br><%= mail_to "selcouthinfomania@gmail.com", "email me" %>, <br>since I'm a student who can't afford Paypal's fee for proper support!
+<br>
+    <br>
+<% end %>
+    
+    </div>

@@ -6,6 +6,19 @@ class PotsController < ApplicationController
     
  layout :resolve_layout
 
+    
+    def buy
+        if params[:id]
+            @pot = Pot.find(params[:id])
+            
+            @image = PotImage.where(pot_id: params[:id]).take
+            
+        else
+            @pot = ""
+        end
+    end
+    
+    
   # GET /pots
   # GET /pots.json
   def index
@@ -15,7 +28,7 @@ class PotsController < ApplicationController
       @pots.each do |pot|
           @imageList[pot.id] = PotImage.where(pot_id: pot.id).take
           if @imageList[pot.id] == nil
-              @imageList[pot.id] = PotImage.where(pot_id: 1).take
+              @imageList[pot.id] = PotImage.take
           end
       end
       

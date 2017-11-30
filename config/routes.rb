@@ -18,6 +18,9 @@ Rails.application.routes.draw do
     get '/pot_images/new/:style' => 'pot_images#new', as: 'new_pot_image_style', constraints: {style: /[0-9]+/, id: /[0-9]+/}
     get '/pot_images/add/:id/:style' => 'pot_images#add', as: 'add_pot_image', constraints: {style: /[0-9]+/, id: /[0-9]+/}
     
+        get '/pots/buy/:style' => 'pots#buy', as: 'buy_pot', constraints: {style: /[0-9]+/}
+
+    get '/pots/buy/:id/:style' => 'pots#buy', as: 'buy_pot_individual', constraints: {style: /[0-9]+/, id: /[0-9]+/}
     
     
 
