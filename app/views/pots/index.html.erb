@@ -49,15 +49,19 @@
         Glazes used: <%= pot.glazes %><br>
         </div>
           <br><br>
+          <% if logged_in? && current_user.admin? %>
 <div class="factOptions">
     
           
         
         <%= link_to 'Edit', edit_pot_style_path(pot, @style) %>
         <%= link_to 'Destroy', pot, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+          <% end %>
           </div>
+
     <% end %>
-
+<%= will_paginate %>
 <br>
-
+<% if logged_in? && current_user.admin? %>
 <%= link_to 'New Pot', new_pot_style_path(@style) %>
+<% end %>

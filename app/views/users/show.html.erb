@@ -1,0 +1,14 @@
+<%= @user.name %>
+<br>
+<%= link_to "Log out", logout_path, method: :delete %>
+<br>
+<%= link_to "Log in", login_path %>
+<br>
+<%= link_to "Edit", edit_user_path %>
+<br><br>
+<%= logged_in? %>
+<br>
+<%= admin? %>
+<br>
+    <br>
+    <%= link_to "This is where the REAL login begins", fractal_login_path %>

@@ -14,10 +14,12 @@
   <% @imageList.each do |pot_image| %>
 
         <%= image_tag pot_image.image_url, :class => "pot_image"%>
+    <% if logged_in? && current_user.admin? %>
     <br>
        <%= link_to 'Show', show_pot_image_style_path(pot_image, @style) %> |
         <%= link_to 'Edit', edit_pot_image_style_path(pot_image, @style) %> |
         <%= link_to 'Destroy', pot_image, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
 <br>
     <% end %>
 
@@ -70,6 +72,10 @@
     <%= link_to 'Buy this item!', buy_pot_individual_path(@pot, @style), :class => "buyButton"%>
          </div>
 <br>
+    
+    <% if logged_in? && current_user.admin? %>
 <%= link_to 'Edit', edit_pot_style_path(@pot, @style) %> |
 <%= link_to 'Add Image', add_pot_image_path(@pot, @style)%>
+    
+    <% end %>
     </div>

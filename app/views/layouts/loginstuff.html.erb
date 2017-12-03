@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Main (plain mode)</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'loginstuff', media: 'all', 'data-turbolinks-track': 'reload' %>
+      
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+    
+    
+    
+  
+
+  <body style="width:100%; margin:0px; padding:0px">
+    <div class="main">
+    
+      <div class="mainPart">
+
+    <%= yield %>
+           </div>
+        
+      </div>
+
+  </body>
+</html>

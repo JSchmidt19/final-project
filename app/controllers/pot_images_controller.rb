@@ -1,5 +1,6 @@
 class PotImagesController < ApplicationController
   before_action :set_pot_image, only: [:show, :edit, :update, :destroy]
+    before_action :admin_user, only: [:destroy, :new, :edit, :create, :update, :index, :show]
     layout :resolve_layout
 
   # GET /pot_images
@@ -104,7 +105,9 @@ class PotImagesController < ApplicationController
         return  "main_plain"
     end
   end
-    
+    def admin_user
+      redirect_to(root_url) unless User.find_by(id: session[:user_id]) && User.find_by(id: session[:user_id]).admin?
+    end
     # Use callbacks to share common setup or constraints between actions.
     def set_pot_image
       @pot_image = PotImage.find(params[:id])

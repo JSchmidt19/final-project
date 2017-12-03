@@ -18,29 +18,29 @@
         <div class="importantText">
             Themes:
         </div>
-        <%= link_to 'Plain', "#{@url}/1", :class => "styles"%>
+        <%= link_to 'Plain', params.permit(:style).merge(:style => "1"), :class => "styles"%>
         <br/>
-        <%= link_to 'Water', "#{@url}/2", :class => "styles"%>
+        <%= link_to 'Water', params.permit(:style).merge(:style => "2"), :class => "styles"%>
         <br/>
-        <%= link_to 'Fire', "#{@url}/3", :class => "styles"%>
+        <%= link_to 'Fire', params.permit(:style).merge(:style => "3"), :class => "styles"%>
         <br/>
-        <%= link_to 'Forest', "#{@url}/4", :class => "styles"%>
+        <%= link_to 'Forest', params.permit(:style).merge(:style => "4"), :class => "styles"%>
         <br/>
-        <%= link_to 'Celestial', "#{@url}/5", :class => "styles"%>
+        <%= link_to 'Celestial', params.permit(:style).merge(:style => "5"), :class => "styles"%>
         <br/>
-        <%= link_to 'Ice', "#{@url}/6", :class => "styles"%>
+        <%= link_to 'Ice', params.permit(:style).merge(:style => "6"), :class => "styles"%>
         <br/>
-        <%= link_to 'Desert', "#{@url}/7", :class => "styles"%>
+        <%= link_to 'Desert', params.permit(:style).merge(:style => "7"), :class => "styles"%>
         <br/>
-        <%= link_to 'Sunset', "#{@url}/8", :class => "styles"%>
+        <%= link_to 'Sunset', params.permit(:style).merge(:style => "8"), :class => "styles"%>
         <br/>
-        <%= link_to 'Steampunk', "#{@url}/9", :class => "styles"%>
+        <%= link_to 'Steampunk', params.permit(:style).merge(:style => "9"), :class => "styles"%>
         <br/>
-        <%= link_to 'Dark', "#{@url}/10", :class => "styles"%>
+        <%= link_to 'Dark', params.permit(:style).merge(:style => "10"), :class => "styles"%>
         <br/>
-        <%= link_to 'Crystal', "#{@url}/11", :class => "styles"%>
+        <%= link_to 'Crystal', params.permit(:style).merge(:style => "11"), :class => "styles"%>
         <br/>
-        <%= link_to 'SCP', "#{@url}/12", :class => "styles"%>
+        <%= link_to 'SCP', params.permit(:style).merge(:style => "12"), :class => "styles"%>
         <br/>
     </div>
 

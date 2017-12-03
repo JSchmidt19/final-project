@@ -1,11 +1,11 @@
 class FactsController < ApplicationController
     before_action :set_fact, only: [:show, :edit, :update, :destroy]
+    before_action :admin_user, only: [:destroy, :new, :edit, :create, :update]
 layout :resolve_layout
   # GET /facts
   # GET /facts.json
   def index
-    @facts = Fact.all
-      @facts = @facts.reverse
+      @facts = Fact.paginate(page: params[:page], :per_page => 20).order('id DESC')
   end
     
     def search 
@@ -18,7 +18,7 @@ layout :resolve_layout
               @facts.push(fact)
           end
       end
-        @facts = @facts.reverse
+        @facts = @facts.reverse.paginate(page: params[:page], :per_page => 20)
         render action: "index"
     end
 
@@ -234,6 +234,10 @@ layout :resolve_layout
         
         
         return true
+    end
+    
+    def admin_user
+      redirect_to(root_url) unless User.find_by(id: session[:user_id]) && User.find_by(id: session[:user_id]).admin?
     end
     
     def resolve_layout

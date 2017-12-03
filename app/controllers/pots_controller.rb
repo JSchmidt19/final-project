@@ -3,7 +3,7 @@ class PotsController < ApplicationController
 
     
   before_action :set_pot, only: [:show, :edit, :update, :destroy]
-    
+    before_action :admin_user, only: [:destroy, :new, :edit, :create, :update]
  layout :resolve_layout
 
     
@@ -23,7 +23,7 @@ class PotsController < ApplicationController
   # GET /pots.json
   def index
       
-    @pots = Pot.all
+    @pots = Pot.paginate(page: params[:page], :per_page => 20).order('id DESC')
       @imageList = Hash.new
       @pots.each do |pot|
           @imageList[pot.id] = PotImage.where(pot_id: pot.id).take
@@ -32,7 +32,7 @@ class PotsController < ApplicationController
           end
       end
       
-      @pots = @pots.reverse
+
           
   end
     
@@ -51,7 +51,7 @@ class PotsController < ApplicationController
               end
           end
       end
-        @pots = @pots.reverse
+        @pots = @pots.reverse.paginate(page: params[:page], :per_page => 20)
         render action: "index"
     end
 
@@ -167,6 +167,10 @@ class PotsController < ApplicationController
         
         
         return true
+    end
+    
+    def admin_user
+      redirect_to(root_url) unless User.find_by(id: session[:user_id]) && User.find_by(id: session[:user_id]).admin?
     end
     
     def resolve_layout

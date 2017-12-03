@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>A Lovely Maze</title>
+</head>
+<style>
+
+    body {
+        background-color: #000;
+        background-image: url(/assets/Fractals/fractal<%= @individual %>.png);
+        background-size: cover;
+        background-repeat: no-repeat; 
+        background-attachment: fixed;
+        background-position: center;
+        -webkit-transition: background-image .3s;
+        -moz-transition:    background-image .3s;
+        -ms-transition:     background-image .3s;
+        -o-transition:      background-image .3s;
+        transition:         background-image .3s;
+        color: #D44;
+        text-align: center;
+        font-size: 20px;
+        font-family: monospace;
+    }
+    
+    div.onbottom {
+        position: absolute;
+        background-image: url(/assets/Fractals/fractal<%= @individual %>vert.png);
+        opacity: .5;
+        top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+        min-height: 100vh;
+        background-size: contain; 
+        background-position: center;
+        -webkit-transition: background-image .3s;
+        -moz-transition:    background-image .3s;
+        -ms-transition:     background-image .3s;
+        -o-transition:      background-image .3s;
+        transition:         background-image .3s;
+        background-color:black;
+        z-index:-1;
+    }
+    div.ontop {
+        
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        
+    }
+    
+    tr>td {
+        padding-top: 2.5vh;
+        
+    }
+    
+    table {
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    div.wrapper {
+        min-height: 100%;
+        
+    }
+    
+    .fraclink {
+        text-decoration: none;
+        color: #D44;
+    }
+
+</style>
+
+<body>
+    
+    <div class="wrapper">
+        
+    <div class="ontop">
+           
+<table>
+
+  <tbody>
+    <% for i in 0...11 %>
+      <tr>
+        <td><%= link_to (params.permit(:picked).merge(:picked => 2 * i )), :class => "fraclink" do %>
+  <% raw @data[2 * i ] %>
+<% end %></td>
+        <td><%= link_to (params.permit(:picked).merge(:picked => 2 * i + 1)), :class => "fraclink" do %>
+  <% raw @data[2 * i + 1] %>
+<% end %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= expected_answers %>
+        <br>
+<%= session[:answers] %>
+        <br>
+        <br>
+        <%= link_to "Answer me these questions three", login_two_path, :class => "fraclink" %>
+        
+
+        <div class="onbottom">
+            
+        </div> 
+    </div>
+    
+    
+<!-- 
+    <div style="color:#F00;">
+    <div style="font-size:3px; font-family: monospace; white-space: pre-wrap; ">
+
+        
+    </div>
+    </div>
+-->
+        
+        </div>
+</body>
+</html>

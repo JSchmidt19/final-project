@@ -44,7 +44,6 @@
 
 
     
-
     <% @facts.each do |fact| %>
 
 
@@ -54,18 +53,22 @@
 </div>
         
 <div style="fact"><%= raw fact.body %></div>
+<% if logged_in? && current_user.admin? %>
 
 <div class="factOptions">
         <%= link_to 'Edit', edit_fact_style_path(fact) %>  
         <%= link_to 'Destroy', fact, method: :delete, data: { confirm: 'Are you sure?' } %>  
     </div>
+      <% end %>
     </div>
     <% end %>
-
+<%= will_paginate %>
 
 
 
 <br>
 <br>
 <br>
+<% if logged_in? && current_user.admin? %>
 <%= link_to 'New Fact', new_fact_style_path(@style) %>
+<% end %>

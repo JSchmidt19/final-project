@@ -2,6 +2,10 @@ Rails.application.routes.draw do
     
     
     
+  get 'users/new'
+
+  get 'sessions/new'
+
     get '/pots/:style' => 'pots#index', as: 'pottery', constraints: { style: /[0-9]+/ }
         
     get '/pots/:id/:style' => 'pots#show', as: 'show_pot_style', constraints: {style: /[0-9]+/, id: /[0-9]+/}
@@ -50,8 +54,8 @@ Rails.application.routes.draw do
    get "main/about" => redirect("main/about/1"), as: 'redirect_about'
    get "main/contact" => redirect("main/contact/1"), as: 'redirect_contact'
    get "main/login" => redirect("main/login/1"), as: 'redirect_login'
-   get "fractal/index" => redirect("fractal/index/1"), as: 'redirect_fract_index'
-   get "fractal/login" => redirect("fractal/login/1"), as: 'redirect_fract_login'
+   #get "fractal/index" => redirect("fractal/index/1"), as: 'redirect_fract_index'
+   #get "fractal/login" => redirect("fractal/login/1"), as: 'redirect_fract_login'
     
     
     get "pots" => redirect("pots/1"), as: 'redirect_pot'
@@ -80,17 +84,35 @@ Rails.application.routes.draw do
     
     get '/contact/:style' => 'main#contact', as: 'contact', constraints: { style: /[0-9]+/ }
     
-    get '/login/:style' => 'main#login', as: 'login', constraints: { style: /[0-9]+/ }
+    get '/login/:style' => 'main#login', as: 'login_main', constraints: { style: /[0-9]+/ }
     
     get '/calculator/:style' => 'calculator#index', as: 'calculator', constraints: { style: /[0-9]+/ }
     
     
 
-    
+    #get "fractal/index/:style" => 'fractal#index', as: 'fract_index'
+   #get "fractal/login/:style" => 'fractal#login', as: 'fract_login'
 
 
     
     get '/calculator/about/:style' => 'calculator#about', as: 'calculator_faq', constraints: { style: /[0-9]+/ }
+    
+    get    '/login',   to: 'sessions#new'
+  post   '/login',   to: 'sessions#create'
+  delete '/logout',  to: 'sessions#destroy'
+    
+
+    get '/logtwo', to: 'sessions#loginsecondary', as: 'login_two'
+    post '/logtwo', to: 'sessions#loginsecondary'
+    
+    
+    get '/fractal' => 'sessions#fractal', as: 'fractal_login'
+    
+    
+    get  '/signup',  to: 'users#new'
+    post '/signup',  to: 'users#create'
+  resources :users
+    
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

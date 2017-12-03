@@ -1,5 +1,6 @@
 class TagsController < ApplicationController
   before_action :set_tag, only: [:show, :edit, :update, :destroy]
+    before_action :admin_user, only: [:destroy, :new, :edit, :create, :update, :index, :show]
 
   # GET /tags
   # GET /tags.json
@@ -62,6 +63,9 @@ class TagsController < ApplicationController
   end
 
   private
+    def admin_user
+      redirect_to(root_url) unless User.find_by(id: session[:user_id]) && User.find_by(id: session[:user_id]).admin?
+    end
     # Use callbacks to share common setup or constraints between actions.
     def set_tag
       @tag = Tag.find(params[:id])

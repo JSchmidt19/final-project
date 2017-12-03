@@ -1,8 +1,13 @@
+<% if admin? %>
+<h1>Nah, fam, you good</h1>
+<% else %>
 <div class= "Sign_Form">
   <h1>Log in</h1>
-  <%= form_tag(url: session_path, :action => 'loginsecondary') do %>
+  <%= form_tag(:action => 'loginsecondary') do %>
     <p>Username or Email:<br> <%= text_field_tag(:name) %></p> 
     <p>Password:<br> <%= password_field_tag :login_password %></p> 
     <%= submit_tag("Log In") %>
   <% end %>
 </div>
+
+<% end %>

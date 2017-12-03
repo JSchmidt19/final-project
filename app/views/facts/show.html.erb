@@ -15,6 +15,7 @@
 <p>
 <%= raw @fact.body %>
 </p>
-
+<% if logged_in? && current_user.admin? %>
 <%= link_to 'Edit', edit_fact_style_path(@fact, @style) %> |
+<% end %>
 <%= link_to 'Back', errata_path(@style) %>
