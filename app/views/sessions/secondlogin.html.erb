@@ -1,13 +1,27 @@
-<% if admin? %>
+<style>
+body {
+        background-image: url(/assets/Fractals/redmoonclose.jpg);
+        background-size: cover;
+        background-repeat: no-repeat; 
+        background-attachment: fixed;
+        background-position: center;
+        color: black;
+        font-family: monospace;
+        
+    }
+</style>
+
+<div class="login_controls">
+    <div class="mainform" style="margin-top: 10%;">
+        <% if admin? %>
 <h1>Nah, fam, you good</h1>
 <% else %>
-<div class= "Sign_Form">
   <h1>Log in</h1>
   <%= form_tag(:action => 'loginsecondary') do %>
-    <p>Username or Email:<br> <%= text_field_tag(:name) %></p> 
-    <p>Password:<br> <%= password_field_tag :login_password %></p> 
-    <%= submit_tag("Log In") %>
+    <p>Email: <%= text_field_tag :name, nil, class: "form_box" %></p> 
+    <p>Password: <%= password_field_tag :login_password, nil, class: "form_box"  %></p> 
+    <%= submit_tag ("Go for it") ,  style: "width: 100px; font-size: 20px; background-color: #F77; border-color: #744;" %>
   <% end %>
-</div>
+</div></div>
 
 <% end %>

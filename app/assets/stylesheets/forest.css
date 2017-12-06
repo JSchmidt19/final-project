@@ -2,105 +2,21 @@ div.myHeader{
 
 text-align: center;
 margin-top: 30px;
-
-}
-
-
-a.tablinks_major {
-border: outset;
-
-border-color: #0000FF;
-text-decoration: none;
-padding: 10px 20px;
-width: 150px;
-text-align: center;
-display: inline-block;
-font-size: 30px;
-
-font-weight:bold;
-color: #2222FF;
-background-color: #8888FF;
-
-}
-
-a.tablinks {
-    border: outset;
-
-border-color: #5555FF;
-text-decoration: none;
-padding: 7px 16px;
-width: 100px;
-text-align: center;
-display: inline-block;
-font-size: 20px;
-
-font-weight:bold;
-color: #7777FF;
-background-color: #CCCCFF;
+    margin-left: 15%;
+    margin-right: 15%;
+    height: 288px;
+    position: relative;
+    background-size: cover;
+        background-position: center;
+    opacity: .75;
     
-    margin-left: 2%;
-    margin-right: 2%;
-}
 
 
-body {
-font-family: baskerville, Georgia, serif;
-background-color: #99D;
-text-align: center;
 }
 
-div.main {
-display: inline-block;
-text-align: center;
-background-color: #BBE;
-margin: 2.5%;
-font-weight:bold;
-min-height:900px;
-width: 80%;
-margin-bottom: 0;
- 
-}
-div.tabCtrl {
-    width = 80%;
-    color: #009;
-    -webkit-transition: opacity .5s ;
-    -moz-transition: opacity .5s;
-    -ms-transition: opacity .5s ;
-    -o-transition: opacity .5s ;
-     opacity: 1;
-}
-
-div.mainPart {
-font-style: oblique;
-text-align: center;
-background-color: #DDF;
-width: 80%;
-margin: auto;
-margin-top: 10px;
-padding: 20px;
-font-weight:bold;
-color: #00D
-    min-height:100%;
-    margin-bottom:0%;
-}
-
-div.footer {
-    text-align:center;
-}
-
-p.standard_text {
-    font-size: 20px;
-    color: #009;
-    line-height: 25px;
-}
-
-div.standard_text {
-    font-size: 20px;
-    color: #009;
-    line-height: 25px;
-}
 
 div.styles {
+    z-index: 2;
     opacity: .8;
     position:absolute;
     padding:5px;
@@ -110,23 +26,239 @@ div.styles {
     background-color: #449;
     margin-top: 20%;
     margin-left: 86%;
+    border-style: inset;
+    border-width: 5px;
+    border-radius: 50px;
+    border-color: #0F0;
+     background-image: url("forest/leaf.jpg");
+
 }
 
 a.styles {
-    border: outset;
-
-border-color: #5555FF;
+    
+    
+    background-image: url("forest/vineborder.png");
+        background-size: 5%, 5%;
+        background-repeat: no-repeat; 
+        background-position: 0 0;
+    border-width: 5px;
+    border-radius: 20px;
+    border-color: #0F0;
 text-decoration: none;
-padding: 7px 16px;
+padding-top: 6px;
+padding-bottom: 6px;
+    padding-right: 30px;
+    padding-left: 15px;
+    
+   
+    
 width: 100px;
 text-align: center;
 display: inline-block;
 font-size: 20px;
 
 font-weight:bold;
-color: #44F;
-background-color: #88B;
+color: #FF9;
+    
+    animation-name: burnmed;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease-in-out;
 }
+
+a.styles:hover { 
+    color: white;
+    -webkit-transition: color 1s ;
+    -moz-transition: color 1s;
+    -ms-transition: color 1s ;
+    -o-transition: color 1s ;
+    transition: color 1s ;
+}
+
+
+a.tablinks_major {
+    border-style: outset;
+    border-width: 5px;
+    border-radius: 45px;
+    border-color: #0F0;
+text-decoration: none;
+padding: 5px 10px;
+    padding-right: 25px;
+width: 200px;
+text-align: center;
+display: inline-block;
+font-size: 50px;
+
+font-weight:bold;
+color: #FF8;
+animation-name: burnmed;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease-in-out;
+    -webkit-transition: color 1s ;
+    -moz-transition: color 1s;
+    -ms-transition: color 1s ;
+    -o-transition: color 1s ;
+    
+    
+
+}
+
+a.tablinks_major:hover { 
+    color: white;
+    
+}
+
+a.tablinks {
+    border-style: inset;
+    border-width: 5px;
+    border-radius: 30px;
+    border-color: #0F0;
+text-decoration: none;
+padding: 7px 30px;
+width: 100px;
+text-align: center;
+display: inline-block;
+font-size: 25px;
+
+font-weight:bold;
+color: #FF7;
+    
+    margin-left: 1%;
+    margin-right: 1%;
+    animation-name: burnmed;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease-in-out;
+    -webkit-transition: color 1s ;
+    -moz-transition: color 1s;
+    -ms-transition: color 1s ;
+    -o-transition: color 1s ;
+}
+
+a.tablinks:hover { 
+    color: white;
+    
+}
+
+
+
+.fire {
+ color: #f5f5f5;
+ text-shadow:
+ 0px -2px 4px #fff,
+ 0px -2px 10px #FF3,
+ 0px -10px 20px #DD0,
+ 0px -20px 40px #CC4;
+ font-size: 100px;
+}
+
+h1 {
+    color: #FF9;
+    animation-name: burnmed;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease-in-out;
+}
+
+body {
+font-family: baskerville, Georgia, serif;
+background-image: url('forest/forest.jpg');
+text-align: center;
+    background-size: cover;
+        background-repeat: no-repeat; 
+        background-attachment: fixed;
+        background-position: center;
+    font-style: oblique;
+    
+ font-family: "Open Sans";
+}
+
+div.main {
+    opacity: .7;
+display: inline-block;
+text-align: center;
+
+padding-top: 3%;
+    margin-top: -3%;
+font-weight:900;
+min-height:50vh;
+
+    width: 80%;
+    
+    background-color: rgba(255, 255, 255, 0.4);
+    border-style: inset;
+    border-width: 5px;
+    border-radius: 200px;
+    border-color: #0F0;
+        margin-bottom:100%;
+    
+        text-shadow: -1px 0 #AAF, 0 1px #AAF, 1px 0 #AAF, 0 -1px #AAF;
+    
+    background-image: url("forest/leaf.jpg");
+
+
+    
+}
+
+
+
+
+div.tabCtrl {
+    width = 80%;
+    -webkit-transition: opacity .5s ;
+    -moz-transition: opacity .5s;
+    -ms-transition: opacity .5s ;
+    -o-transition: opacity .5s ;
+     opacity: 1;
+    font-weight: 500%;
+}
+
+div.mainPart {
+    font-style: oblique;
+text-align: center;
+width: 80%;
+    min-height: 20vh;
+margin: auto;
+margin-top: 10px;
+padding: 20px;
+font-weight: 900;
+    font-size: 20px;
+    color: #AAA;
+
+
+    position: relative;
+    
+    animation-name: burnmed;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease-in-out;
+}
+
+div.footer {
+    text-align:center;
+    position: relative;
+    display:block;
+}
+
+p.standard_text {
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: 20px;
+}
+
+div.standard_text {
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: 20px;
+}
+
+
 
 div.smalltext {
     font-size: 10px;
@@ -140,14 +272,14 @@ ul li  {
 }
 
 ul li.question {
+    color: #FF9;
     font-size: 30px;
     padding: 10px;
-    color: #009;
         line-height: 30px;
 }
 
 ul li.answer {
-    color: #00D;
+    color: #CC8;
     font-size: 20px;
     padding: 5px;
 }
@@ -166,6 +298,631 @@ div.importantText {
     font-size: 20px;
     font-weight: bold;
     font-style: oblique;
-    color: #66F;
+    color: #FFA;
     margin: 5px;
+animation-name: burnmed;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes burnmed {
+   0% { text-shadow:
+ 0px -1px 2px #fff,
+ 0px -1px 5px #FF3,
+ 0px -5px 10px #DD0,
+ 0px -10px 20px #CC4,
+       0px 1px 2px #fff,
+ 0px 1px 5px #FF3,
+ 0px 5px 10px #DD0,
+ 0px 10px 20px #CC4;}
+        10% { text-shadow:
+ -1px -1px 2px #fff,
+ -1px -1px 5px #FF3,
+ 5px -5px 10px #DD0,
+ 10px -10px 20px #CC4,
+            -1px 1px 2px #fff,
+ -1px 1px 5px #FF3,
+ 5px 5px 10px #DD0,
+ 10px 10px 20px #CC4;}
+    20% { text-shadow:
+ 2px -1px 2px #fff,
+ 2px -1px 5px #FF3,
+ 5px -5px 10px #DD0,
+ 10px -10px 20px #CC4,
+        2px 1px 2px #fff,
+ 2px 1px 5px #FF3,
+ 5px 5px 10px #DD0,
+ 10px 10px 20px #CC4;}
+    30% { text-shadow:
+ 0px -1px 2px #fff,
+ 0px -1px 5px #FF3,
+ 0px -5px 10px #DD0,
+ 0px -10px 20px #CC4,
+         0px 1px 2px #fff,
+ 0px 1px 5px #FF3,
+ 0px 5px 10px #DD0,
+ 0px 10px 20px #CC4;}
+    40% { text-shadow:
+ 2px -1px 2px #fff,
+ 2px -1px 5px #FF3,
+ 10px -5px 10px #DD0,
+ 20px -10px 20px #CC4,
+    2px 1px 2px #fff,
+ 2px 1px 5px #FF3,
+ 10px 5px 10px #DD0,
+ 20px 10px 20px #CC4;}
+    50% { text-shadow:
+ 2px -1px 2px #fff,
+ 2px -1px 5px #FF3,
+ 5px -5px 10px #DD0,
+ 10px -10px 20px #CC4,
+         2px 1px 2px #fff,
+ 2px 1px 5px #FF3,
+ 5px 5px 10px #DD0,
+ 10px 10px 20px #CC4;}
+    60% { text-shadow:
+ 0px -1px 2px #fff,
+ 0px -1px 5px #FF3,
+ 0px -5px 10px #DD0,
+ 0px -10px 20px #CC4,
+        0px 1px 2px #fff,
+ 0px 1px 5px #FF3,
+ 0px 5px 10px #DD0,
+ 0px 10px 20px #CC4;}
+    70% { text-shadow:
+ -1px -1px 2px #fff,
+ -1px -1px 5px #FF3,
+ -5px -5px 10px #DD0,
+ -10px -10px 20px #CC4,
+        -1px 1px 2px #fff,
+ -1px 1px 5px #FF3,
+ -5px 5px 10px #DD0,
+ -10px 10px 20px #CC4;}
+    80% { text-shadow:
+ 0px -1px 2px #fff,
+ 0px -1px 5px #FF3,
+ 0px -5px 10px #DD0,
+ 0px -10px 20px #CC4,
+    0px 1px 2px #fff,
+ 0px 1px 5px #FF3,
+ 0px 5px 10px #DD0,
+ 0px 10px 20px #CC4;}
+    90% { text-shadow:
+ 2px -1px 2px #fff,
+ 2px -1px 5px #FF3,
+ -5px -5px 10px #DD0,
+ -10px -10px 20px #CC4,
+     2px 1px 2px #fff,
+ 2px 1px 5px #FF3,
+ -5px 5px 10px #DD0,
+ -10px 10px 20px #CC4;}
+    100% { text-shadow:
+ 0px -1px 2px #fff,
+ 0px -1px 5px #FF3,
+ 0px -5px 10px #DD0,
+ 0px -10px 20px #CC4,
+        0px 1px 2px #fff,
+ 0px 1px 5px #FF3,
+ 0px 5px 10px #DD0,
+ 0px 10px 20px #CC4;}
+}
+
+div.secondHeader {
+    font-size: 40px;
+    color: #00D;
+    padding: 10px;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+        background-size: cover;
+        background-repeat: no-repeat; 
+        background-attachment: fixed;
+        background-position: center;
+}
+
+div.factTitle {
+    font-size: 20px;
+    color: #00F;
+    text-decoration: none;
+}
+
+a.factTitle {
+    text-decoration: none;
+}
+
+a.factTitle:visited {
+    color: #009;
+}
+
+div.fact {
+    width: 90%; 
+    margin-left:5%;
+    margin-right:5%;
+    color: #00D
+}
+
+div.factOptions {
+    font-size: 10px;
+    padding-top: 10px;
+}
+
+div.bordered {
+    min-width: 50%;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: black;
+    padding: 1px;
+}
+
+div.hidden_text {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -ms-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #BBE;
+
+}
+div.hidden_text:hover{
+    opacity: 1;
+    
+}
+
+div.boxed {
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 10px;
+    border-color: #0F0;
+    margin: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 5px;
+    padding-top: 0px;
+}
+
+div.field {
+    margin: 1%;
+    
+}
+
+.pot_image {
+    margin: 3%;
+    max-height: 80%;
+    max-width: 80%;
+}
+
+.list_image {
+    width: 40%;
+}
+
+div.pottery_title {
+    font-size: 30px;
+    text-decoration: none;
+}
+
+a.pottery_title {
+    text-decoration: none;
+}
+
+a.pottery_title:visited {
+    color: #009;
+}
+
+div.searchbar {
+    
+     border-style: inset;
+    border-width: 5px;
+    border-radius: 50px;
+    border-color: #0F0;
+text-decoration: none;
+padding-top: 25px;
+padding-bottom: 25px;
+    padding-right: 30px;
+    padding-left: 15px;
+    opacity: .8;
+    position:fixed;
+    display:block;
+    float:right;
+margin-top: 2%;
+    
+    background-image: url("fire/fireborderfancy.jpg");
+    background-size: cover;
+        background-repeat: no-repeat; 
+        background-position: 0 0;
+-webkit-transition: color 1s ;
+    -moz-transition: color 1s;
+    -ms-transition: color 1s ;
+    -o-transition: color 1s ;
+}
+
+a.searchbar:hover { 
+    color: white;
+    
+}
+
+div.searchbarfact {
+    
+     border-style: inset;
+    border-width: 5px;
+    border-radius: 50px;
+    border-color: #0F0;
+text-decoration: none;
+padding-top: 5px;
+padding-bottom: 5px;
+    padding-right: 30px;
+    padding-left: 15px;
+    opacity: .8;
+    width: 200px;
+    position:absolute;
+    display:block;
+    float:right;
+
+    background-image: url("fire/fireborderfancy.jpg");
+    background-size: cover;
+        background-repeat: no-repeat; 
+        background-position: 0 0;
+    -webkit-transition: color 1s ;
+    -moz-transition: color 1s;
+    -ms-transition: color 1s ;
+    -o-transition: color 1s ;
+
+}
+
+a.searchbarfact:hover { 
+    color: white;
+    
+}
+
+.searchoption {
+    background-color: #88D;
+    color: #00F;
+    font-weight: bold;
+    border-color: #0F0;
+}
+
+div.alignfact {
+    position:absolute;
+    left: -9.5%;
+    float: left;
+    
+    top: 130px;;
+
+}
+
+div.alignpot {
+    position:absolute;
+    left: -22%;
+    float: left;
+    
+    top: -10px;
+
+}
+
+div.buyButton {
+
+}
+
+a.buyButton {
+    border: outset;
+border-radius: 50px;
+border-color: #0F0;
+text-decoration: none;
+padding: 7px 40px;
+width: 100px;
+text-align: center;
+display: inline-block;
+font-size: 20px;
+
+font-weight:bold;
+color: red;
+background-color: #4400AA;
+    
+    margin-left: 1%;
+    margin-right: 1%;
+    
+    color: blue;
+    text-decoration: none;
+    
+}
+
+.bigImageLink {
+    
+    position:absolute; 
+    width:100%;
+    height:71.5%;
+    top:0;
+    left: 0;
+    text-decoration: none;
+    font-size: 120px;
+    font-weight: 500;
+    padding-top: 7%;
+    text-align: center;
+    
+         color: white;
+ text-shadow:
+ 0px -2px 4px #fff,
+ 0px -2px 10px #FF3,
+ 0px -10px 20px #DD0,
+ 0px -20px 40px #CC4;
+
+
+
+    animation-name: burnbig;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes burnbig {
+   0% { text-shadow:
+ 0px -2px 4px #fff,
+ 0px -2px 10px #FF3,
+ 0px -10px 20px #DD0,
+ 0px -20px 40px #CC4,
+       0px 2px 4px #fff,
+ 0px 2px 10px #FF3,
+ 0px 10px 20px #DD0,
+ 0px 20px 40px #CC4;}
+        10% { text-shadow:
+ -2px -2px 4px #fff,
+ -2px -2px 10px #FF3,
+ 10px -10px 20px #DD0,
+ 20px -20px 40px #CC4,
+            -2px 2px 4px #fff,
+ -2px 2px 10px #FF3,
+ 10px 10px 20px #DD0,
+ 20px 20px 40px #CC4;}
+    20% { text-shadow:
+ 2px -2px 4px #fff,
+ 2px -2px 10px #FF3,
+ 10px -10px 20px #DD0,
+ 20px -20px 40px #CC4,
+         2px 2px 4px #fff,
+ 2px 2px 10px #FF3,
+ 10px 10px 20px #DD0,
+ 20px 20px 40px #CC4;}
+    30% { text-shadow:
+ 0px -2px 4px #fff,
+ 0px -2px 10px #FF3,
+ 0px -10px 20px #DD0,
+ 0px -20px 40px #CC4;}
+    40% { text-shadow:
+ 4px -2px 4px #fff,
+ 4px -2px 10px #FF3,
+ 20px -10px 20px #DD0,
+ 40px -20px 40px #CC4
+         4px 2px 4px #fff,
+ 4px 2px 10px #FF3,
+ 20px 10px 20px #DD0,
+ 40px 20px 40px #CC4;}
+    50% { text-shadow:
+ 2px -2px 4px #fff,
+ 2px -2px 10px #FF3,
+ 10px -10px 20px #DD0,
+ 20px -20px 40px #CC4
+        , 2px 2px 4px #fff,
+ 2px 2px 10px #FF3,
+ 10px 10px 20px #DD0,
+ 20px 20px 40px #CC4;}
+    60% { text-shadow:
+ 0px -2px 4px #fff,
+ 0px -2px 10px #FF3,
+ 0px -10px 20px #DD0,
+ 0px -20px 40px #CC4, 0px 2px 4px #fff,
+ 0px 2px 10px #FF3,
+ 0px 10px 20px #DD0,
+ 0px 20px 40px #CC4;}
+    70% { text-shadow:
+ -2px -2px 4px #fff,
+ -2px -2px 10px #FF3,
+ -10px -10px 20px #DD0,
+ -20px -20px 40px #CC4,
+        -2px 2px 4px #fff,
+ -2px 2px 10px #FF3,
+ -10px 10px 20px #DD0,
+ -20px 20px 40px #CC4;}
+    80% { text-shadow:
+ 0px -2px 4px #fff,
+ 0px -2px 10px #FF3,
+ 0px -10px 20px #DD0,
+ 0px -20px 40px #CC4, 0px 2px 4px #fff,
+ 0px 2px 10px #FF3,
+ 0px 10px 20px #DD0,
+ 0px 20px 40px #CC4;}
+    90% { text-shadow:
+ 2px -2px 4px #fff,
+ 2px -2px 10px #FF3,
+ -10px -10px 20px #DD0,
+ -20px -20px 40px #CC4,
+         2px 2px 4px #fff,
+ 2px 2px 10px #FF3,
+ -10px 10px 20px #DD0,
+ -20px 20px 40px #CC4;}
+    100% { text-shadow:
+ 0px -2px 4px #fff,
+ 0px -2px 10px #FF3,
+ 0px -10px 20px #DD0,
+ 0px -20px 40px #CC4,
+         0px 2px 4px #fff,
+ 0px 2px 10px #FF3,
+ 0px 10px 20px #DD0,
+ 0px 20px 40px #CC4;}
+}
+
+@keyframes rot {
+	from {
+		transform: rotate(0deg)
+		           translate(-70%)
+		           rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg)
+		           translate(-70%) 
+		           rotate(-360deg);
+	}
+}
+
+
+
+.light {
+    width: 40%;
+	height: 40%;
+    border-radius: 100%;
+	font-size: 100px;
+    margin-top: 30%;
+	animation: rot;
+    animation-duration: inherit;
+    animation-iteration-count: infinite;
+    animation-timing-function: inherit;
+    background-color: #FF9;
+    animation-delay: inherit;
+    -webkit-box-shadow:0 0 50px 15px #ffA, 0 0 75px 20px #CC7, 0 0 100px 20px #AA5,0 0 50px 15px #ffA, 0 0 75px 20px #CC7, 0 0 100px 20px #AA5,0 0 50px 15px #ffA, 0 0 75px 20px #CC7, 0 0 100px 20px #AA5,0 0 50px 15px #ffA, 0 0 75px 20px #CC7, 0 0 100px 20px #AA5,0 0 50px 15px #ffA, 0 0 75px 20px #CC7, 0 0 100px 20px #AA5,0 0 50px 15px #ffA, 0 0 75px 20px #CC7, 0 0 100px 20px #AA5,0 0 50px 15px #ffA, 0 0 75px 20px #CC7, 0 0 100px 20px #AA5 ;
+
+-moz-box-shadow: 0 0 50px 15px #ffA, 0 0 75px 20px #CC7, 0 0 100px 20px #AA5,0 0 50px 15px #ffA, 0 0 75px 20px #CC7, 0 0 100px 20px #AA5,0 0 50px 15px #ffA, 0 0 75px 20px #CC7, 0 0 100px 20px #AA5,0 0 50px 15px #ffA, 0 0 75px 20px #CC7, 0 0 100px 20px #AA5,0 0 50px 15px #ffA, 0 0 75px 20px #CC7, 0 0 100px 20px #AA5,0 0 50px 15px #ffA, 0 0 75px 20px #CC7, 0 0 100px 20px #AA5,0 0 50px 15px #ffA, 0 0 75px 20px #CC7, 0 0 100px 20px #AA5 ;
+
+box-shadow:0 0 50px 15px #ffA, 0 0 75px 20px #CC7, 0 0 100px 20px #AA5,0 0 50px 15px #ffA, 0 0 75px 20px #CC7, 0 0 100px 20px #AA5,0 0 50px 15px #ffA, 0 0 75px 20px #CC7, 0 0 100px 20px #AA5,0 0 50px 15px #ffA, 0 0 75px 20px #CC7, 0 0 100px 20px #AA5,0 0 50px 15px #ffA, 0 0 75px 20px #CC7, 0 0 100px 20px #AA5,0 0 50px 15px #ffA, 0 0 75px 20px #CC7, 0 0 100px 20px #AA5,0 0 50px 15px #ffA, 0 0 75px 20px #CC7, 0 0 100px 20px #AA5 ;
+}
+
+.fairy:hover {
+    animation-duration: .5s;
+    
+}
+
+.fairy {
+    width: 100%;
+	height: 100%;
+    animation-timing-function: linear;
+     animation-duration: inherit;
+    position: relative;
+    border-radius: 100%;
+    animation-delay: inherit;
+}
+
+.fairy1 {
+    z-index: 5;
+	width: 85px;
+	height: 85px;
+	position: fixed;
+	top: 10%;
+    left: 8%;
+    animation-duration: 3.5s;
+    animation-timing-function: linear;
+    border-radius: 100%; 
+}
+.fairy2 {
+    z-index: 5;
+	width: 70px;
+	height: 70px;
+	position: fixed;
+	top: 9%;
+    right: 8%;
+    animation-duration: 2.5s;
+    animation-timing-function: linear;
+    border-radius: 100%; 
+}
+.fairy3 {
+    z-index: 5;
+	width: 150px;
+	height: 150px;
+	position: fixed;
+	top: 8%;
+    left: 20%;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    border-radius: 100%; 
+}
+.fairy4 {
+    z-index: 5;
+	width: 123px;
+	height: 123px;
+	position: fixed;
+	top: 5%;
+    right: 50%;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    border-radius: 100%; 
+}
+.fairy5 {
+    z-index: 5;
+	width: 142px;
+	height: 142px;
+	position: fixed;
+	bottom: 5%;
+    left: 8%;
+    animation-duration: 3.3s;
+    animation-timing-function: linear;
+    border-radius: 100%; 
+}
+.fairy6 {
+    z-index: 5;
+	width: 90px;
+	height: 90px;
+	position: fixed;
+	bottom: 4%;
+    right: 7%;
+    animation-duration: 4.1s;
+    animation-timing-function: linear;
+    border-radius: 100%; 
+}
+.fairy7 {
+    z-index: 5;
+	width: 110px;
+	height: 110px;
+	position: fixed;
+	top: 20%;
+    left: 80%;
+    animation-duration: 3.9s;
+    animation-timing-function: linear;
+    border-radius: 100%; 
+}
+.fairy8 {
+    z-index: 5;
+	width: 120px;
+	height: 120px;
+	position: fixed;
+	bottom: 2%;
+    left: 50%;
+    animation-duration: 2.8s;
+    animation-timing-function: linear;
+    border-radius: 100%; 
+}
+.fairy9 {
+    z-index: 5;
+	width: 70px;
+	height: 70px;
+	position: fixed;
+	bottom: 30%;
+    left: 5%;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    border-radius: 100%; 
+}
+.fairy10 {
+    z-index: 5;
+	width: 100px;
+	height: 100px;
+	position: fixed;
+	bottom: 3%;
+    left: 78%;
+    animation-duration: 3.4s;
+    animation-timing-function: linear;
+    border-radius: 100%; 
+}
+.fairy11 {
+    z-index: 5;
+	width: 50px;
+	height: 50px;
+	position: fixed;
+	top: 5%;
+    left: 25%;
+    animation-duration: 4.3s;
+    animation-timing-function: linear;
+    border-radius: 100%; 
 }

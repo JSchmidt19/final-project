@@ -1,4 +1,6 @@
 <% provide(:title, 'All users') %>
+<div class="controls">
+    <div class="userinfo">
 <h1>All users</h1>
 
 <%= current_user.admin %>
@@ -8,13 +10,16 @@
     
   <% @users.each do |user| %>
     <li>
-      <%= link_to user.name, user %>
+      <%= link_to user.name, user , class: "userlinks" %>
         <% if current_user.admin? && !current_user?(user) %>
     | <%= link_to "delete", user, method: :delete,
-                                  data: { confirm: "You sure?" } %>
+                                  data: { confirm: "You sure?" }, class: "userlinks", style: "font-size: 10px;"  %>
   <% end %>
     </li>
   <% end %>
 </ul>
 
 <%= will_paginate %>
+
+            
+    </div></div>

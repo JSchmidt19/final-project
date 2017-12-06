@@ -67,7 +67,8 @@ Rails.application.routes.draw do
     
     
     
-  root :to => "main#index", style: '1'
+      root :to => "main#index", style: 1
+    
     
     resources :main
     resources :fact_tags
@@ -100,6 +101,8 @@ Rails.application.routes.draw do
     get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
+    
+    post '/lgin' => redirect("/login"), to: 'sessions#new', as: 'lgin'
     
 
     get '/logtwo', to: 'sessions#loginsecondary', as: 'login_two'

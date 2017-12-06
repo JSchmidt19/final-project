@@ -31,6 +31,7 @@ class MainController < ApplicationController
     
     private 
     def resolve_layout
+    session[:style] = params[:style]
     if (session[:style] == "1")
         return "main_plain"
      elsif(session[:style] == "2")

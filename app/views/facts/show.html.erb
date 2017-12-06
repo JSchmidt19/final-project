@@ -1,21 +1,18 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @fact.title %>
-</p>
-
-
-<p>
-  <strong>Fact:</strong>
-  <%= @fact.fact_id %>
-</p>
-
-
-<p>
-<%= raw @fact.body %>
-</p>
+<div class="boxed">
+<div class="factTitle">
+    <h2><%= link_to @fact.title, show_fact_style_path(@fact, @style), :class => "factTitle"%></h2>
+</div>
+        
+<div style="fact"><%= raw @fact.body %></div>
 <% if logged_in? && current_user.admin? %>
-<%= link_to 'Edit', edit_fact_style_path(@fact, @style) %> |
-<% end %>
+
+<div class="factOptions">
+        <%= link_to 'Edit', edit_fact_style_path(@fact) %>  
+        <%= link_to 'Destroy', @fact, method: :delete, data: { confirm: 'Are you sure?' } %>  
+    </div>
+      <% end %>
+    </div>
+
+
 <%= link_to 'Back', errata_path(@style) %>

@@ -1,4 +1,108 @@
 body {
-    background-image: none;
-    background-color: red;
+    background-image: url(/assets/Fractals/redmoontrees.jpeg);
+    background-color: #A00;
+    background-size: cover;
+        background-repeat: no-repeat; 
+        background-attachment: fixed;
+        background-position: center;
+        color: black;
+        font-family: monospace;
+
+}
+
+.login-control {
+        color: black;
+        background-color: black;
+        border-color: black;
+    }
+    
+    div.login_controls {
+        background-color: #744;
+        opacity: .5;
+        position: absolute;
+        top: 30vh;
+        left: 30vw;
+        width: 40vw;
+        min-height: 40vh;
+       text-align: center;
+        
+    }
+    
+    div.mainform {
+        min-height: 50%;
+        margin-top: 12%;
+        font-size: 25px;
+        font-weight: bold;
+        position: relative;
+    }
+    
+    .form_box {
+        font-size: 20px;
+        border-width: 5px;
+        border-color: #A66;
+        background-color: #F77;
+    }
+
+div.login_controls {
+        background-color: #744;
+        opacity: .5;
+        position: absolute;
+        top: 30vh;
+        left: 30vw;
+        width: 40vw;
+        height: 40vh;
+       text-align: center;
+    }
+
+div.otherform {
+        min-height: 75%;
+        margin-top: 12%;
+        font-size: 25px;
+        font-weight: bold;
+        position: relative;
+    }
+
+div.controls {
+        background-color: #744;
+        opacity: .5;
+        position: absolute;
+        top: 30vh;
+        left: 30vw;
+        width: 40vw;
+        min-height: 40vh;
+       text-align: center;
+    }
+
+.form-control {
+    width: 200px;
+}
+
+div.userinfo {
+
+    font-size: 30px;
+    color: #F99;
+
+    text-decoration: none;
+    position: relative;
+}
+
+a.userlinks {
+    text-decoration: none;
+    color: #F99;
+        border-style: groove;
+        border-width: 5px;
+        border-color: #A66;
+    line-height: 50px;
+    padding: 5px;
+
+    -webkit-transition: background-color 3s, color 3s  ;
+    -moz-transition: background-color 3s, color 3s ;
+    -ms-transition: background-color 3s , color 3s ;
+    -o-transition: background-color 3s , color 3s ;
+}
+
+a.userlinks:hover {
+    color: red;
+    background-color: black;
+    
 }

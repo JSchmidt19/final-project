@@ -2,23 +2,24 @@
   <%= render 'shared/error_messages', object: @user %>
 
   <%= f.label :name %>
-  <%= f.text_field :name, class: 'form-control' %>
-
+  <%= f.text_field :name, class: 'form_box' %>
+<br><br>
   <%= f.label :email %>
-  <%= f.email_field :email, class: 'form-control' %>
-
+  <%= f.email_field :email, class: 'form_box' %>
+<br><br>
   <%= f.label :password %>
-  <%= f.password_field :password, class: 'form-control' %>
-
+  <%= f.password_field :password, class: 'form_box' %>
+<br><br>
   <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation, class: 'form-control' %>
-
+  <%= f.password_field :password_confirmation, class: 'form_box' %>
+<br><br>
 <% if logged_in? && current_user.admin? %>
 <%= f.label :second_password %>
-  <%= f.password_field :second_password, class: 'form-control' %>
+  <%= f.password_field :second_password, class: 'form_box' %>
 
 <% end %>
 <br>
 <br>
-  <%= f.submit "change", class: "primary" %>
+  <%= f.submit "Submit", class: "form_box", style: "font-size: 40px;" %>
+<br><br>
 <% end %>

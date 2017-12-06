@@ -1,25 +1,56 @@
+<style>
+
+    body {
+        background-image: url(/assets/Fractals/redmoonfar.jpg);
+        background-size: cover;
+        background-repeat: no-repeat; 
+        background-attachment: fixed;
+        background-position: center;
+        color: black;
+        font-family: monospace;
+        
+    }
+    
+    
+
+
+</style>
+
+
+
 <% provide(:title, "Log in") %>
 
 <% if logged_in? %>
-<h1>You're already logged in as <%= current_user.name %></h1> 
+
 <% else %>
+<!-- I have literally no idea why it shows twice.  
 
-<h1>Log in</h1>
+I've done everything.
 
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <%= form_for(:session, url: login_path) do |f| %>
+It still shows.
 
-      <%= f.label :email %>
-      <%= f.email_field :email, class: 'form-control' %>
+Luckily I've managed to get one to not render, but dammit Ruby, I had faith in you.
 
-      <%= f.label :password %>
-      <%= f.password_field :password, class: 'form-control' %>
+-->
 
-      <%= f.submit "Log in", class: "btn btn-primary" %>
-    <% end %>
-<!--
-    <p>New user? <%= link_to "Sign up now!", signup_path %></p> -->
-  </div>
+<%= render 'blankpagetemplate' %>
+<div >
+  
 </div>
 <% end %>
+
+<div class="login_controls">
+    <div class="mainform">
+    <%= form_for(:session, url: 'lgin') do |f| %>
+
+      <%= f.label :email %>
+      <%= f.email_field :email, class: 'form_box', style: 'width: 200px;' %>
+<br><br><br>
+      <%= f.label :password %>
+      <%= f.password_field :password, class: 'form_box', style: 'width: 178px;' %>
+<br><br><br>
+      <%= f.submit "Log in", class: "form_box", style: 'width: 140px;' %>
+    <% end %>
+    </div>
+</div>
+     

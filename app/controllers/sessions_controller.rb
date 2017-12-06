@@ -19,7 +19,7 @@ layout "loginstuff"
     
     def loginsecondary
         authorized_user = User.authenticateSecondary(params[:name],params[:login_password])
-    if logged_in? && current_user.admin? && answers_are_correct && authorized_user
+    if logged_in? && current_user.admin? && session[:answers] && answers_are_correct && authorized_user
         session[:answers] = []
         session[:fractal] = []
         session[:user_id_admin] = authorized_user.id

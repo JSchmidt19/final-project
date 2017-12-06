@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
     before_filter :set_default_style
 
     def set_default_style
-        if session.has_key?(:visited_before)
+        if session[:visited_before]
             
         else
           session[:visited_before] = true

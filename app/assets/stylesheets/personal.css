@@ -313,15 +313,13 @@ ul li  {
 ul li.question {
     font-size: 30px;
     padding: 10px;
-    color: #AAA;
-            text-shadow: -2px 0 #5559, 0 2px #5559, 2px 0 #5559, 0 -2px #5559;
+
     
         line-height: 30px;
 }
 
 ul li.answer {
-    color: #999;
-            text-shadow: -2px 0 #4449, 0 2px #4449, 2px 0 #4449, 0 -2px #4449;
+
     font-size: 20px;
     padding: 5px;
 }
@@ -369,9 +367,11 @@ div.secondHeader {
 }
 
 
-div.factTitle {
-    font-size: 20px;
-    color: #00F;
+a.factTitle {
+    font-size: 40px;
+    text-shadow: -10px 2px #444, 2px 10px #444, 10px 2px #444, 2px -10px #444;
+        animation: shadowTitle 4s linear 0s infinite normal, textshift 4s linear 0s infinite alternate-reverse;
+    text-decoration: none;
 }
 
 div.fact {
@@ -396,7 +396,7 @@ div.bordered {
 
 div.hidden_text {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     opacity: 0;
     -webkit-transition: opacity 1s ease-in-out;
     -moz-transition: opacity 1s ease-in-out;
@@ -514,6 +514,7 @@ div.field {
 }
 
 
+
 a.pottery_title {
     font-size: 40px;
     text-shadow: -10px 2px #444, 2px 10px #444, 10px 2px #444, 2px -10px #444;
@@ -611,7 +612,7 @@ div.buyButton {
 a.buyButton {
     border: outset;
 border-radius: 50px;
-border-color: red;
+border-color: black;
 text-decoration: none;
 padding: 7px 40px;
 width: 100px;
@@ -621,12 +622,12 @@ font-size: 20px;
 
 font-weight:bold;
 color: red;
-background-color: #8800FF;
+background-image: url("personal/mist1.jpg");
     
     margin-left: 1%;
     margin-right: 1%;
     
-    color: red;
+    color: silver;
     text-decoration: none;
     
 }

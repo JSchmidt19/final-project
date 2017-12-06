@@ -1,14 +1,18 @@
+<div class="controls", style="padding: 10px; border-style: groove; border-width: 10px;border-color: #A66;">
+    <br><br>
+    <div class="userinfo">
+        
+  
 <%= @user.name %>
-<br>
-<%= link_to "Log out", logout_path, method: :delete %>
-<br>
-<%= link_to "Log in", login_path %>
-<br>
-<%= link_to "Edit", edit_user_path %>
 <br><br>
-<%= logged_in? %>
+<%= link_to "Log out", logout_path, method: :delete, class: "userlinks" %>
 <br>
-<%= admin? %>
+<%= link_to "Log in", login_path, class: "userlinks" %>
+<br>
+<%= link_to "Edit", edit_user_path, class: "userlinks" %>
+<br>
 <br>
     <br>
-    <%= link_to "This is where the REAL login begins", fractal_login_path %>
+    <%= link_to "This is where the REAL login begins", fractal_login_path, class: "userlinks" %>
+
+    </div>  <br><br></div>
