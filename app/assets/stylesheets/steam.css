@@ -2,105 +2,22 @@ div.myHeader{
 
 text-align: center;
 margin-top: 30px;
-
-}
-
-
-a.tablinks_major {
-border: outset;
-
-border-color: #0000FF;
-text-decoration: none;
-padding: 10px 20px;
-width: 150px;
-text-align: center;
-display: inline-block;
-font-size: 30px;
-
-font-weight:bold;
-color: #2222FF;
-background-color: #8888FF;
-
-}
-
-a.tablinks {
-    border: outset;
-
-border-color: #5555FF;
-text-decoration: none;
-padding: 7px 16px;
-width: 100px;
-text-align: center;
-display: inline-block;
-font-size: 20px;
-
-font-weight:bold;
-color: #7777FF;
-background-color: #CCCCFF;
+    margin-left: 15%;
+    margin-right: 15%;
+    height: 288px;
+    position: relative;
+    background-size: cover;
+        background-position: center;
+    opacity: .75;
     
-    margin-left: 2%;
-    margin-right: 2%;
-}
+    margin-bottom: 100px;
 
 
-body {
-font-family: baskerville, Georgia, serif;
-background-color: #99D;
-text-align: center;
 }
 
-div.main {
-display: inline-block;
-text-align: center;
-background-color: #BBE;
-margin: 2.5%;
-font-weight:bold;
-min-height:900px;
-width: 80%;
-margin-bottom: 0;
- 
-}
-div.tabCtrl {
-    width = 80%;
-    color: #009;
-    -webkit-transition: opacity .5s ;
-    -moz-transition: opacity .5s;
-    -ms-transition: opacity .5s ;
-    -o-transition: opacity .5s ;
-     opacity: 1;
-}
-
-div.mainPart {
-font-style: oblique;
-text-align: center;
-background-color: #DDF;
-width: 80%;
-margin: auto;
-margin-top: 10px;
-padding: 20px;
-font-weight:bold;
-color: #00D
-    min-height:100%;
-    margin-bottom:0%;
-}
-
-div.footer {
-    text-align:center;
-}
-
-p.standard_text {
-    font-size: 20px;
-    color: #009;
-    line-height: 25px;
-}
-
-div.standard_text {
-    font-size: 20px;
-    color: #009;
-    line-height: 25px;
-}
 
 div.styles {
+    z-index: 2;
     opacity: .8;
     position:absolute;
     padding:5px;
@@ -110,26 +27,249 @@ div.styles {
     background-color: #449;
     margin-top: 20%;
     margin-left: 86%;
+    border-style: none;
+    border-width: 10px;
+    border-radius: 20px;
+    border-color: black;
+background-image: url("steampunk/steamgun.jpg");
+    background-size: cover;
+        background-repeat: no-repeat; 
+        background-position: 50% 0;
 }
 
 a.styles {
-    border: outset;
-
-border-color: #5555FF;
+    
+    
+    border-style: none;
+    border-width: 5px;
+    border-radius: 5px;
+    border-color: black;
 text-decoration: none;
-padding: 7px 16px;
+padding-top: 6px;
+padding-bottom: 6px;
+    padding-right: 30px;
+    padding-left: 15px;
+    
+   
+    
 width: 100px;
 text-align: center;
 display: inline-block;
-font-size: 20px;
+font-size: 30px;
 
 font-weight:bold;
-color: #44F;
-background-color: #88B;
+color: black;
+    
+    animation-name: burnmed;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease-in-out;
 }
 
+a.styles:hover { 
+color: #C50;   -webkit-transition: color 1s ;
+    -moz-transition: color 1s;
+    -ms-transition: color 1s ;
+    -o-transition: color 1s ;
+    transition: color 1s ;
+}
+
+
+a.tablinks_major {
+border-style: none;
+    border-width: 10px;
+    border-radius: 5px;
+    border-color: #00F;
+text-decoration: none;
+padding: 5px 10px;
+
+width: 250px;
+text-align: center;
+display: inline-block;
+font-size: 70px;
+
+font-weight:bold;
+color: black;
+animation-name: burnmed;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease-in-out;
+    -webkit-transition: color 1s ;
+    -moz-transition: color 1s;
+    -ms-transition: color 1s ;
+    -o-transition: color 1s ;
+
+}
+
+a.tablinks_major:hover { 
+color: #C50;   
+}
+
+a.tablinks {
+    border-style: none;
+    border-width: 8px;
+    border-radius: 5px;
+    border-color: #00F;
+text-decoration: none;
+padding: 7px 30px;
+width: 100px;
+text-align: center;
+display: inline-block;
+font-size: 40px;
+
+font-weight:bold;
+color: black;
+    
+    margin-left: 1%;
+    margin-right: 1%;
+    animation-name: burnmed;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease-in-out;
+    -webkit-transition: color 1s ;
+    -moz-transition: color 1s;
+    -ms-transition: color 1s ;
+    -o-transition: color 1s ;
+}
+
+a.tablinks:hover { 
+color: #C50;   
+}
+
+
+
+
+
+h1 {
+    color: black;
+    animation-name: burnmed;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease-in-out;
+}
+
+body {
+font-family: Brush Script MT;
+background-image: url('steampunk/steampunk.jpg');
+text-align: center;
+    background-size: cover;
+        background-repeat: no-repeat; 
+        background-attachment: fixed;
+        background-position: center;
+    font-style: oblique;
+    
+     text-shadow:
+ 0px -1px 4px #fff,
+ 0px -1px 10px #FF3,
+ 0px -3px 20px #F90,
+ 0px -7px 40px #AA3,
+ 0px 1px 4px #fff,
+ 0px 1px 10px #FF3,
+ 0px 3px 20px #F90,
+ 0px 7px 40px #AA3,
+-1px 0 4px #fff,
+-1px 0 10px #FF3,
+-3px 0 20px #F90,
+-7px 0 40px #AA3,
+ 1px 0 4px #fff,
+ 1px 0 10px #FF3,
+ 3px 0 20px #F90,
+ 7px 0 40px #AA3;
+    
+}
+
+div.main {
+    opacity: .7;
+display: inline-block;
+text-align: center;
+
+padding-top: 3%;
+    margin-top: -3%;
+font-weight:900;
+min-height:50vh;
+
+    width: 80%;
+    
+    background-color: rgba(255, 255, 255, 0.4);
+    border-style: none;
+    border-width: 50px;
+    border-radius: 20px;
+    border-color: #33F;
+        margin-bottom:100%;
+    
+        
+    
+background-image: url("steampunk/parchment.jpg");
+    background-size: cover;
+        background-repeat: no-repeat; 
+        background-position: 0 0;
+
+    
+}
+
+
+
+
+div.tabCtrl {
+    width = 80%;
+    -webkit-transition: opacity .5s ;
+    -moz-transition: opacity .5s;
+    -ms-transition: opacity .5s ;
+    -o-transition: opacity .5s ;
+     opacity: 1;
+    font-weight: 500%;
+}
+
+div.mainPart {
+    font-style: oblique;
+text-align: center;
+width: 80%;
+    min-height: 20vh;
+margin: auto;
+margin-top: 10px;
+padding: 20px;
+font-weight: 900;
+    font-size: 30px;
+    color: black;
+
+    
+
+
+    position: relative;
+    
+    animation-name: burnmed;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease-in-out;
+}
+
+div.footer {
+    text-align:center;
+    position: relative;
+    display:block;
+}
+
+p.standard_text {
+    font-size: 30px;
+    line-height: 25px;
+    font-weight: 20px;
+}
+
+div.standard_text {
+    font-size: 30px;
+    line-height: 25px;
+    font-weight: 20px;
+}
+
+
+
 div.smalltext {
-    font-size: 10px;
+    font-size: 15px;
 }
 
 ul  {
@@ -140,15 +280,15 @@ ul li  {
 }
 
 ul li.question {
-    font-size: 30px;
+    color: black;
+    font-size: 40px;
     padding: 10px;
-    color: #009;
         line-height: 30px;
 }
 
 ul li.answer {
-    color: #00D;
-    font-size: 20px;
+    color: black;
+    font-size: 30px;
     padding: 5px;
 }
 
@@ -163,9 +303,383 @@ div.rightalign {
 }
 
 div.importantText {
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bold;
     font-style: oblique;
-    color: #66F;
+    color: black;
     margin: 5px;
+animation-name: burnmed;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes burnmedd {
+   0% { text-shadow:
+0px -1px 4px #fff,
+ 0px -1px 10px #FF3,
+ 0px -5px 20px #F90,
+ 0px -10px 40px #C33,
+        0px 1px 4px #fff,
+ 0px 1px 10px #FF3,
+ 0px 5px 20px #F90,
+ 0px 10px 40px #C33,
+        -1px 0 4px #fff,
+ -1px 0 10px #FF3,
+ -5px 0 20px #F90,
+ -10px 0 40px #C33,
+               1px 0 4px #fff,
+ 1px 0 10px #FF3,
+ 5px 0 20px #F90,
+ 10px 0 40px #C33,
+       
+       -1px 0 #FDD, 0 1px #FDD, 1px 0 #FDD, 0 -1px #FDD;
+       
+}
+    100% { text-shadow:
+        0px -2px 8px #fff,
+ 0px -2px 20px #FF3,
+ 0px -10px 40px #F90,
+ 0px -20px 80px #C33,
+        0px 2px 8px #fff,
+ 0px 2px 20px #FF3,
+ 0px 10px 40px #F90,
+ 0px 20px 80px #C33,
+        -2px 0 8px #fff,
+ -2px 0 20px #FF3,
+ -10px 0 40px #F90,
+ -20px 0 80px #C33,
+              2px 0 8px #fff,
+ 2px 0 20px #FF3,
+ 10px 0 40px #F90,
+ 20px 0 80px #C33,
+        -1px 0 #FDD, 0 1px #FDD, 1px 0 #FDD, 0 -1px #FDD;
+}
+}
+
+div.secondHeader {
+    font-size: 55px;
+    color: #00D;
+    padding: 10px;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+        background-size: cover;
+        background-repeat: no-repeat; 
+        background-attachment: fixed;
+        background-position: center;
+}
+
+div.factTitle {
+    font-size: 30px;
+    color: #00F;
+    text-decoration: none;
+}
+
+a.factTitle {
+    text-decoration: none;
+}
+
+a.factTitle:visited {
+    color: #009;
+}
+
+div.fact {
+    width: 90%; 
+    margin-left:5%;
+    margin-right:5%;
+    color: #00D
+}
+
+div.factOptions {
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+div.bordered {
+    min-width: 50%;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: black;
+    padding: 1px;
+}
+
+div.hidden_text {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -ms-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #BBE;
+
+}
+div.hidden_text:hover{
+    opacity: 1;
+    
+}
+
+div.boxed {
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 5px;
+    border-color: #900;
+    margin: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 5px;
+    padding-top: 0px;
+}
+
+div.field {
+    margin: 1%;
+    
+}
+
+.pot_image {
+    margin: 3%;
+    max-height: 80%;
+    max-width: 80%;
+}
+
+.list_image {
+    width: 40%;
+}
+
+div.pottery_title {
+    font-size: 45px;
+    text-decoration: none;
+}
+
+a.pottery_title {
+    text-decoration: none;
+}
+
+a.pottery_title:visited {
+    color: #009;
+}
+
+div.searchbar {
+    
+     border-style: none;
+    border-width: 5px;
+    border-radius: 20px;
+    border-color: #00F;
+text-decoration: none;
+padding-top: 25px;
+padding-bottom: 25px;
+    padding-right: 30px;
+    padding-left: 15px;
+    opacity: .8;
+    position:fixed;
+    display:block;
+    float:right;
+margin-top: 2%;
+    
+background: -webkit-radial-gradient(circle, rgba(255,0,0,.5), rgba(255,150,0,.5)); /* Safari */
+  background: -o-radial-gradient(circle, rgba(255,0,0,.5), rgba(255,150,0,.5)); /* Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(circle, rgba(255,0,0,.5), rgba(255,150,0,.5)); /* Firefox 3.6 to 15 */
+  background: radial-gradient(circle, rgba(255,0,0,.5), rgba(255,150,0,.5)); /* Standard syntax */    background-size: cover;
+        background-repeat: no-repeat; 
+        background-position: 0 0;
+-webkit-transition: color 1s ;
+    -moz-transition: color 1s;
+    -ms-transition: color 1s ;
+    -o-transition: color 1s ;
+}
+
+a.searchbar:hover { 
+    color: #C50;
+    
+}
+
+div.searchbarfact {
+    
+     border-style: none;
+    border-width: 5px;
+    border-radius: 20px;
+    border-color: #00F;
+text-decoration: none;
+padding-top: 5px;
+padding-bottom: 5px;
+    padding-right: 30px;
+    padding-left: 15px;
+    opacity: .8;
+    width: 200px;
+    position:absolute;
+    display:block;
+    float:right;
+
+background: -webkit-radial-gradient(circle, rgba(255,0,0,.5), rgba(255,150,0,.5)); /* Safari */
+  background: -o-radial-gradient(circle, rgba(255,0,0,.5), rgba(255,150,0,.5)); /* Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(circle, rgba(255,0,0,.5), rgba(255,150,0,.5)); /* Firefox 3.6 to 15 */
+  background: radial-gradient(circle, rgba(255,0,0,.5), rgba(255,150,0,.5)); /* Standard syntax */    background-size: cover;
+        background-repeat: no-repeat; 
+        background-position: 0 0;
+    -webkit-transition: color 1s ;
+    -moz-transition: color 1s;
+    -ms-transition: color 1s ;
+    -o-transition: color 1s ;
+
+}
+
+a.searchbarfact:hover { 
+color: #C50;   
+}
+
+.searchoption {
+    background-color: #88D;
+    color: #00F;
+    font-weight: bold;
+    border-color: #00F;
+}
+
+div.alignfact {
+    position:absolute;
+    left: -9.5%;
+    float: left;
+    
+    top: 130px;;
+
+}
+
+div.alignpot {
+    position:absolute;
+    left: -22%;
+    float: left;
+    
+    top: -10px;
+
+}
+
+div.buyButton {
+
+}
+
+a.buyButton {
+    border: outset;
+border-radius: 20px;
+border-color: blue;
+text-decoration: none;
+padding: 7px 40px;
+width: 100px;
+text-align: center;
+display: inline-block;
+font-size: 30px;
+
+font-weight:bold;
+color: red;
+background-color: #4400AA;
+    
+    margin-left: 1%;
+    margin-right: 1%;
+    
+    color: blue;
+    text-decoration: none;
+    
+}
+
+.bigImageLink {
+    
+    position:absolute; 
+    width:100%;
+    height:71.5%;
+    top:0;
+    left: 0;
+    text-decoration: none;
+    font-size: 130px;
+    font-weight: 500;
+    padding-top: 7%;
+    text-align: center;
+    
+         color: black;
+ text-shadow:
+ 0px -2px 4px #fff,
+ 0px -2px 10px #FF3,
+ 0px -10px 20px #F90,
+ 0px -20px 40px #AA3,
+     0px 2px 4px #fff,
+ 0px 2px 10px #FF3,
+ 0px 10px 20px #F90,
+ 0px 20px 40px #AA3,
+    -2px 4px #fff,
+ -2px 0 10px #FF3,
+  -10px 0 20px #F90,
+  -20px 0 40px #AA3,
+     2px 4px #fff,
+ 2px 0 10px #FF3,
+  10px 0 20px #F90,
+  20px 0 40px #AA3;
+
+
+
+    animation-name: burnbig;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes burnbigg {
+  0% {  text-shadow:
+        0px -2px 8px #fff,
+ 0px -2px 20px #FF3,
+ 0px -10px 40px #F90,
+ 0px -20px 80px #C33,
+        0px 2px 8px #fff,
+ 0px 2px 20px #FF3,
+ 0px 10px 40px #F90,
+ 0px 20px 80px #C33,
+        -2px 0 8px #fff,
+ -2px 0 20px #FF3,
+ -10px 0 40px #F90,
+ -20px 0 80px #C33,
+              2px 0 8px #fff,
+ 2px 0 20px #FF3,
+ 10px 0 40px #F90,
+ 20px 0 80px #C33,
+        -1px 0 #FDD, 0 1px #FDD, 1px 0 #FDD, 0 -1px #FDD;
+    }
+    
+    100% {  text-shadow:
+        0px -4px 8px #fff,
+ 0px -4px 20px #FF3,
+ 0px -20px 40px #F90,
+ 0px -40px 80px #C33,
+        0px 4px 8px #fff,
+ 0px 4px 20px #FF3,
+ 0px 20px 40px #F90,
+ 0px 40px 80px #C33,
+        -4px 0 8px #fff,
+ -4px 0 20px #FF3,
+ -20px 0 40px #F90,
+ -40px 0 80px #C33,
+              4px 0 8px #fff,
+ 4px 0 20px #FF3,
+ 20px 0 40px #F90,
+ 40px 0 80px #C33,
+        
+0px -8px 8px #fff,
+ 0px -8px 20px #FF3,
+ 0px -40px 40px #F90,
+ 0px -80px 80px #C33,
+        0px 8px 8px #fff,
+ 0px 8px 20px #FF3,
+ 0px 40px 40px #F90,
+ 0px 80px 80px #C33,
+        -8px 0 8px #fff,
+ -8px 0 20px #FF3,
+ -40px 0 40px #F90,
+ -80px 0 80px #C33,
+              8px 0 8px #fff,
+ 8px 0 20px #FF3,
+ 40px 0 40px #F90,
+ 80px 0 80px #C33,        
+
+        -1px 0 #FDD, 0 1px #FDD, 1px 0 #FDD, 0 -1px #FDD;
+    }
 }

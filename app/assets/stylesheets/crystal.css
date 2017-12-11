@@ -2,131 +2,287 @@ div.myHeader{
 
 text-align: center;
 margin-top: 30px;
+    margin-left: 15%;
+    margin-right: 15%;
+    height: 288px;
+    position: relative;
+    background-size: cover;
+        background-position: center;
+    opacity: .75;
+    -webkit-clip-path: polygon(50% 0%, 95% 5%, 100% 35%, 100% 70%, 94% 96%, 50% 100%, 4% 84%, 0% 70%, 0 34%, 3% 6%);
+clip-path: polygon(50% 0%, 95% 5%, 100% 35%, 100% 70%, 94% 96%, 50% 100%, 4% 84%, 0% 70%, 0 34%, 3% 6%);
+
+
+
+background-image: url("crystal/crystalglass.jpg");
+
 
 }
 
-
-a.tablinks_major {
-border: outset;
-
-border-color: #0000FF;
-text-decoration: none;
-padding: 10px 20px;
-width: 150px;
-text-align: center;
-display: inline-block;
-font-size: 30px;
-
-font-weight:bold;
-color: #2222FF;
-background-color: #8888FF;
-
-}
-
-a.tablinks {
-    border: outset;
-
-border-color: #5555FF;
-text-decoration: none;
-padding: 7px 16px;
-width: 100px;
-text-align: center;
-display: inline-block;
-font-size: 20px;
-
-font-weight:bold;
-color: #7777FF;
-background-color: #CCCCFF;
-    
-    margin-left: 2%;
-    margin-right: 2%;
-}
-
-
-body {
-font-family: baskerville, Georgia, serif;
-background-color: #99D;
-text-align: center;
-}
-
-div.main {
-display: inline-block;
-text-align: center;
-background-color: #BBE;
-margin: 2.5%;
-font-weight:bold;
-min-height:900px;
-width: 80%;
-margin-bottom: 0;
- 
-}
-div.tabCtrl {
-    width = 80%;
-    color: #009;
-    -webkit-transition: opacity .5s ;
-    -moz-transition: opacity .5s;
-    -ms-transition: opacity .5s ;
-    -o-transition: opacity .5s ;
-     opacity: 1;
-}
-
-div.mainPart {
-font-style: oblique;
-text-align: center;
-background-color: #DDF;
-width: 80%;
-margin: auto;
-margin-top: 10px;
-padding: 20px;
-font-weight:bold;
-color: #00D
-    min-height:100%;
-    margin-bottom:0%;
-}
-
-div.footer {
-    text-align:center;
-}
-
-p.standard_text {
-    font-size: 20px;
-    color: #009;
-    line-height: 25px;
-}
-
-div.standard_text {
-    font-size: 20px;
-    color: #009;
-    line-height: 25px;
-}
 
 div.styles {
+    z-index: 2;
     opacity: .8;
     position:absolute;
-    padding:5px;
+    padding:20px;
+    padding-top: 50px;
+    
     display:block;
     float:right;
     width: 10%;
     background-color: #449;
     margin-top: 20%;
     margin-left: 86%;
+    border-style: none;
+    border-width: 5px;
+    border-radius: 0px; -webkit-clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%); clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%); background-image: url("crystal/pinkcrystal.JPG"); background-size: cover; background-repeat: none; background-position: 50% 50%; 50px;
+    border-color: #D6A;
+     background-image: url("crystal/purple.jpg");
+    background-size: cover;
+        background-repeat: no-repeat; 
+        background-position: 0 0;
 }
 
 a.styles {
-    border: outset;
-
-border-color: #5555FF;
+    
+    
+    border-style: none;
+    border-width: 2px;
+    border-radius: 0px; -webkit-clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%); clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%); background-image: url("crystal/pinkcrystal.JPG"); background-size: cover; background-repeat: none; background-position: 50% 50%; 20px;
+    border-color: #D6A;
 text-decoration: none;
-padding: 7px 16px;
+padding-top: 6px;
+padding-bottom: 6px;
+    padding-right: 30px;
+    padding-left: 15px;
+    
+   
+    
 width: 100px;
 text-align: center;
 display: inline-block;
 font-size: 20px;
 
 font-weight:bold;
-color: #44F;
-background-color: #88B;
+color: #f0f;
+    
+    animation-name: burnmed;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease-in-out;
 }
+
+a.styles:hover { 
+    color: #00F;
+    -webkit-transition: color 1s ;
+    -moz-transition: color 1s;
+    -ms-transition: color 1s ;
+    -o-transition: color 1s ;
+    transition: color 1s ;
+}
+
+
+a.tablinks_major {
+border-style: none;
+    border-width: 5px;
+    border-radius: 0px; -webkit-clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%); clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%); background-image: url("crystal/pinkcrystal.JPG"); background-size: cover; background-repeat: none; background-position: 50% 50%; 50px;
+    border-color: #D6A;
+text-decoration: none;
+padding: 5px 10px;
+    padding-right: 15px;
+   padding-top: 25px;
+    padding-bottom: 25px;
+width: 350px;
+text-align: center;
+display: inline-block;
+font-size: 50px;
+
+font-weight:bold;
+color: #f0f;
+animation-name: burnmed;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease-in-out;
+    -webkit-transition: color 1s ;
+    -moz-transition: color 1s;
+    -ms-transition: color 1s ;
+    -o-transition: color 1s ;
+
+}
+
+a.tablinks_major:hover { 
+    color: #00F;
+    
+}
+
+a.tablinks {
+    border-style: none;
+    border-width: 3px;
+    border-radius: 0px; -webkit-clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%); clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%); background-image: url("crystal/pinkcrystal.JPG"); background-size: cover; background-repeat: none; background-position: 50% 50%; 30px;
+    border-color: #D6A;
+text-decoration: none;
+padding: 7px 30px;
+width: 100px;
+text-align: center;
+display: inline-block;
+font-size: 30px;
+
+font-weight:bold;
+color: #f0f;
+    
+    margin-left: 1%;
+    margin-right: 1%;
+    animation-name: burnmed;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease-in-out;
+    -webkit-transition: color 1s ;
+    -moz-transition: color 1s;
+    -ms-transition: color 1s ;
+    -o-transition: color 1s ;
+}
+
+a.tablinks:hover { 
+    color: #00F;
+    
+}
+
+
+
+.fire {
+ color: #f5f5f5;
+ text-shadow:
+ 0px -2px 4px #fff,
+ 0px -2px 10px #FF3,
+ 0px -10px 20px #F90,
+ 0px -20px 40px #C33;
+ font-size: 100px;
+}
+
+h1 {
+    color: #f0f;
+    animation-name: burnmed;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease-in-out;
+}
+
+body {
+font-family: Georgia, serif;
+background-image: url('crystal/crystal.jpg');
+text-align: center;
+    background-size: cover;
+        background-repeat: no-repeat; 
+        background-attachment: fixed;
+        background-position: center;
+    font-style: oblique;
+    
+    text-shadow:
+ 0px -2px 4px #fff,
+ 0px -2px 10px #F3F,
+ 0px -10px 20px #90F,
+ 0px -20px 40px #33C,
+        0px 2px 4px #fff,
+ 0px 2px 10px #F3F,
+ 0px 10px 20px #90F,
+ 0px 20px 40px #33C,
+         -2px 0 4px #fff,
+  -2px 0 10px #F3F,
+  -10px 0 20px #90F,
+  -20px 0 40px #33C,
+        2px 0 4px #fff,
+  2px 0 10px #F3F,
+  10px 0 20px #90F,
+  20px 0 40px #33C;
+    
+}
+
+div.main {
+    opacity: .7;
+display: inline-block;
+text-align: center;
+
+padding-top: 3%;
+    margin-top: -3%;
+font-weight:900;
+min-height:50vh;
+padding-top: 15vh;
+    width: 80%;
+    
+    background-color: rgba(255, 255, 255, 0.4);
+    border-style: none;
+    border-width: 8px;
+    border-radius: 0px; -webkit-clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%); clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%); background-image: url("crystal/pinkcrystal.JPG"); background-size: cover; background-repeat: none; background-position: 50% 50%; 200px;
+    border-color: #D6A;
+        margin-bottom:100%;
+    
+    
+    background-image: url("crystal/purple.jpg");
+    background-size: cover;
+        background-repeat: no-repeat; 
+        background-position: 0 0;
+
+    
+}
+
+
+
+
+div.tabCtrl {
+    width = 80%;
+    -webkit-transition: opacity .5s ;
+    -moz-transition: opacity .5s;
+    -ms-transition: opacity .5s ;
+    -o-transition: opacity .5s ;
+     opacity: 1;
+    font-weight: 500%;
+}
+
+div.mainPart {
+    font-style: oblique;
+text-align: center;
+width: 80%;
+    min-height: 20vh;
+margin: auto;
+margin-top: 10px;
+padding: 20px;
+color: #00F;
+    font-size: 20px;
+    color: #000;
+
+
+    position: relative;
+    
+    animation-name: burnmed;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease-in-out;
+}
+
+div.footer {
+    text-align:center;
+    position: relative;
+    display:block;
+}
+
+p.standard_text {
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: 20px;
+}
+
+div.standard_text {
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: 20px;
+}
+
+
 
 div.smalltext {
     font-size: 10px;
@@ -140,14 +296,14 @@ ul li  {
 }
 
 ul li.question {
+    color: #f0f;
     font-size: 30px;
     padding: 10px;
-    color: #009;
         line-height: 30px;
 }
 
 ul li.answer {
-    color: #00D;
+    color: #f0f;
     font-size: 20px;
     padding: 5px;
 }
@@ -166,6 +322,390 @@ div.importantText {
     font-size: 20px;
     font-weight: bold;
     font-style: oblique;
-    color: #66F;
+    color: #f0f;
     margin: 5px;
+animation-name: burnmed;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes burnnmed {
+   0% { text-shadow:
+ 0px -1px 2px #fff,
+ 0px -1px 5px #FF3,
+ 0px -5px 10px #F90,
+ 0px -10px 20px #C33;}
+        10% { text-shadow:
+ -1px -1px 2px #fff,
+ -1px -1px 5px #FF3,
+ 5px -5px 10px #F90,
+ 10px -10px 20px #C33;}
+    20% { text-shadow:
+ 2px -1px 2px #fff,
+ 2px -1px 5px #FF3,
+ 5px -5px 10px #F90,
+ 10px -10px 20px #C33;}
+    30% { text-shadow:
+ 0px -1px 2px #fff,
+ 0px -1px 5px #FF3,
+ 0px -5px 10px #F90,
+ 0px -10px 20px #C33;}
+    40% { text-shadow:
+ 2px -1px 2px #fff,
+ 2px -1px 5px #FF3,
+ 10px -5px 10px #F90,
+ 20px -10px 20px #C33;}
+    50% { text-shadow:
+ 2px -1px 2px #fff,
+ 2px -1px 5px #FF3,
+ 5px -5px 10px #F90,
+ 10px -10px 20px #C33;}
+    60% { text-shadow:
+ 0px -1px 2px #fff,
+ 0px -1px 5px #FF3,
+ 0px -5px 10px #F90,
+ 0px -10px 20px #C33;}
+    70% { text-shadow:
+ -1px -1px 2px #fff,
+ -1px -1px 5px #FF3,
+ -5px -5px 10px #F90,
+ -10px -10px 20px #C33;}
+    80% { text-shadow:
+ 0px -1px 2px #fff,
+ 0px -1px 5px #FF3,
+ 0px -5px 10px #F90,
+ 0px -10px 20px #C33;}
+    90% { text-shadow:
+ 2px -1px 2px #fff,
+ 2px -1px 5px #FF3,
+ -5px -5px 10px #F90,
+ -10px -10px 20px #C33;}
+    100% { text-shadow:
+ 0px -1px 2px #fff,
+ 0px -1px 5px #FF3,
+ 0px -5px 10px #F90,
+ 0px -10px 20px #C33;}
+}
+
+div.secondHeader {
+    font-size: 40px;
+    color: #00D;
+    padding: 10px;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+        background-size: cover;
+        background-repeat: no-repeat; 
+        background-attachment: fixed;
+        background-position: center;
+}
+
+div.factTitle {
+    font-size: 20px;
+    color: #00F;
+    text-decoration: none;
+}
+
+a.factTitle {
+    text-decoration: none;
+}
+
+a.factTitle:visited {
+    color: #009;
+}
+
+div.fact {
+    width: 90%; 
+    margin-left:5%;
+    margin-right:5%;
+    color: #00D
+}
+
+div.factOptions {
+    font-size: 10px;
+    padding-top: 10px;
+}
+
+div.bordered {
+    min-width: 50%;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: #f0f;
+    padding: 1px;
+}
+
+div.hidden_text {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -ms-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #BBE;
+
+}
+div.hidden_text:hover{
+    opacity: 1;
+    
+}
+
+div.boxed {
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 0px; -webkit-clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%); clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%); background-image: url("crystal/pinkcrystal.JPG"); background-size: cover; background-repeat: none; background-position: 50% 50%; 10px;
+    border-color: #D6A;
+    margin: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 5px;
+    padding-top: 0px;
+}
+
+div.field {
+    margin: 1%;
+    
+}
+
+.pot_image {
+    margin: 3%;
+    max-height: 80%;
+    max-width: 80%;
+}
+
+.list_image {
+    width: 40%;
+}
+
+div.pottery_title {
+    font-size: 30px;
+    text-decoration: none;
+}
+
+a.pottery_title {
+    text-decoration: none;
+}
+
+a.pottery_title:visited {
+    color: #009;
+}
+
+div.searchbar {
+    
+     border-style: none;
+    border-width: 5px;
+    border-radius: 0px; -webkit-clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%); clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%); background-image: url("crystal/pinkcrystal.JPG"); background-size: cover; background-repeat: none; background-position: 50% 50%; 50px;
+    border-color: #D6A;
+text-decoration: none;
+padding-top: 25px;
+padding-bottom: 25px;
+    padding-right: 30px;
+    padding-left: 15px;
+    opacity: .8;
+    position:fixed;
+    display:block;
+    float:right;
+margin-top: 2%;
+    
+    background-image: url("crystal/purple.jpg");
+    background-size: cover;
+        background-repeat: no-repeat; 
+        background-position: 0 0;
+-webkit-transition: color 1s ;
+    -moz-transition: color 1s;
+    -ms-transition: color 1s ;
+    -o-transition: color 1s ;
+}
+
+a.searchbar:hover { 
+    color: #00F;
+    
+}
+
+div.searchbarfact {
+    
+     border-style: none;
+    border-width: 5px;
+    border-radius: 0px; -webkit-clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%); clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%); background-image: url("crystal/pinkcrystal.JPG"); background-size: cover; background-repeat: none; background-position: 50% 50%; 50px;
+    border-color: #D6A;
+text-decoration: none;
+padding-top: 5px;
+padding-bottom: 5px;
+    padding-right: 30px;
+    padding-left: 15px;
+    opacity: .8;
+    width: 200px;
+    position:absolute;
+    display:block;
+    float:right;
+
+    background-image: url("crystal/purple.jpg");
+    background-size: cover;
+        background-repeat: no-repeat; 
+        background-position: 0 0;
+    -webkit-transition: color 1s ;
+    -moz-transition: color 1s;
+    -ms-transition: color 1s ;
+    -o-transition: color 1s ;
+
+}
+
+a.searchbarfact:hover { 
+    color: #00F;
+    
+}
+
+.searchoption {
+    background-color: #88D;
+    color: #00F;
+    font-weight: bold;
+    border-color: #D6A;
+}
+
+div.alignfact {
+    position:absolute;
+    left: -9.5%;
+    float: left;
+    
+    top: 130px;;
+
+}
+
+div.alignpot {
+    position:absolute;
+    left: -22%;
+    float: left;
+    
+    top: -10px;
+
+}
+
+div.buyButton {
+
+}
+
+a.buyButton {
+    border: outset;
+border-radius: 0px; -webkit-clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%); clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%); background-image: url("crystal/pinkcrystal.JPG"); background-size: cover; background-repeat: none; background-position: 50% 50%; 50px;
+border-color: D6A;
+text-decoration: none;
+padding: 7px 40px;
+width: 100px;
+text-align: center;
+display: inline-block;
+font-size: 20px;
+
+font-weight:bold;
+color: red;
+background-color: #4400AA;
+    
+    margin-left: 1%;
+    margin-right: 1%;
+    
+    color: blue;
+    text-decoration: none;
+    
+}
+
+.bigImageLink {
+    
+    position:absolute; 
+    width:100%;
+    height:71.5%;
+    top:0;
+    left: 0;
+    text-decoration: none;
+    font-size: 100px;
+    font-weight: 500;
+    padding-top: 7%;
+    text-align: center;
+    
+         color: #F0F;
+ text-shadow:
+ 0px -2px 4px #fff,
+ 0px -2px 10px #F3F,
+ 0px -10px 20px #90F,
+ 0px -20px 40px #33C,
+        0px 2px 4px #fff,
+ 0px 2px 10px #F3F,
+ 0px 10px 20px #90F,
+ 0px 20px 40px #33C,
+         -2px 0 4px #fff,
+  -2px 0 10px #F3F,
+  -10px 0 20px #90F,
+  -20px 0 40px #33C,
+        2px 0 4px #fff,
+  2px 0 10px #F3F,
+  10px 0 20px #90F,
+  20px 0 40px #33C;
+
+
+
+    animation-name: burnbig;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes burnnbig {
+   0% { text-shadow:
+ 0px -2px 4px #fff,
+ 0px -2px 10px #FF3,
+ 0px -10px 20px #F90,
+ 0px -20px 40px #C33;}
+        10% { text-shadow:
+ -2px -2px 4px #fff,
+ -2px -2px 10px #FF3,
+ 10px -10px 20px #F90,
+ 20px -20px 40px #C33;}
+    20% { text-shadow:
+ 2px -2px 4px #fff,
+ 2px -2px 10px #FF3,
+ 10px -10px 20px #F90,
+ 20px -20px 40px #C33;}
+    30% { text-shadow:
+ 0px -2px 4px #fff,
+ 0px -2px 10px #FF3,
+ 0px -10px 20px #F90,
+ 0px -20px 40px #C33;}
+    40% { text-shadow:
+ 4px -2px 4px #fff,
+ 4px -2px 10px #FF3,
+ 20px -10px 20px #F90,
+ 40px -20px 40px #C33;}
+    50% { text-shadow:
+ 2px -2px 4px #fff,
+ 2px -2px 10px #FF3,
+ 10px -10px 20px #F90,
+ 20px -20px 40px #C33;}
+    60% { text-shadow:
+ 0px -2px 4px #fff,
+ 0px -2px 10px #FF3,
+ 0px -10px 20px #F90,
+ 0px -20px 40px #C33;}
+    70% { text-shadow:
+ -2px -2px 4px #fff,
+ -2px -2px 10px #FF3,
+ -10px -10px 20px #F90,
+ -20px -20px 40px #C33;}
+    80% { text-shadow:
+ 0px -2px 4px #fff,
+ 0px -2px 10px #FF3,
+ 0px -10px 20px #F90,
+ 0px -20px 40px #C33;}
+    90% { text-shadow:
+ 2px -2px 4px #fff,
+ 2px -2px 10px #FF3,
+ -10px -10px 20px #F90,
+ -20px -20px 40px #C33;}
+    100% { text-shadow:
+ 0px -2px 4px #fff,
+ 0px -2px 10px #FF3,
+ 0px -10px 20px #F90,
+ 0px -20px 40px #C33;}
 }

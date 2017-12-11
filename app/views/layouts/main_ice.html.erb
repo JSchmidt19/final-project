@@ -4,7 +4,6 @@
     <title>Main (ice mode)</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag    'ice', media: 'all', 'data-turbolinks-track': 'reload' %>
       
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -19,54 +18,65 @@
         <div class="importantText">
             Themes:
         </div>
-        <%= link_to 'Plain', "#{@url}/1", :class => "styles"%>
+        <%= link_to 'Plain', params.permit(:style).merge(:style => "1"), :class => "styles"%>
         <br/>
-        <%= link_to 'Water', "#{@url}/2", :class => "styles"%>
+        <%= link_to 'Water', params.permit(:style).merge(:style => "2"), :class => "styles"%>
         <br/>
-        <%= link_to 'Fire', "#{@url}/3", :class => "styles"%>
+        <%= link_to 'Fire', params.permit(:style).merge(:style => "3"), :class => "styles"%>
         <br/>
-        <%= link_to 'Forest', "#{@url}/4", :class => "styles"%>
+        <%= link_to 'Forest', params.permit(:style).merge(:style => "4"), :class => "styles"%>
         <br/>
-        <%= link_to 'Celestial', "#{@url}/5", :class => "styles"%>
+        <%= link_to 'Celestial', params.permit(:style).merge(:style => "5"), :class => "styles"%>
         <br/>
-        <%= link_to 'Ice', "#{@url}/6", :class => "styles"%>
+        <%= link_to 'Ice', params.permit(:style).merge(:style => "6"), :class => "styles"%>
         <br/>
-        <%= link_to 'Desert', "#{@url}/7", :class => "styles"%>
+        <%= link_to 'Desert', params.permit(:style).merge(:style => "7"), :class => "styles"%>
         <br/>
-        <%= link_to 'Sunset', "#{@url}/8", :class => "styles"%>
+        <%= link_to 'Sunset', params.permit(:style).merge(:style => "8"), :class => "styles"%>
         <br/>
-        <%= link_to 'Steampunk', "#{@url}/9", :class => "styles"%>
+        <%= link_to 'Steampunk', params.permit(:style).merge(:style => "9"), :class => "styles"%>
         <br/>
-        <%= link_to 'Dark', "#{@url}/10", :class => "styles"%>
+        <%= link_to 'Dark', params.permit(:style).merge(:style => "10"), :class => "styles"%>
         <br/>
-        <%= link_to 'Crystal', "#{@url}/11", :class => "styles"%>
+        <%= link_to 'Crystal', params.permit(:style).merge(:style => "11"), :class => "styles"%>
         <br/>
-        <%= link_to 'SCP', "#{@url}/12", :class => "styles"%>
+        <%= link_to 'SCP', params.permit(:style).merge(:style => "12"), :class => "styles"%>
         <br/>
     </div>
 
-  <body style="width:100%; margin:0px; padding:0px">
-    <div class="main">
-    <div class="myHeader" >
-        <div id="headerImage" style="display: block" width="80%" height="200px">
-            <%= link_to image_tag("/assets/mainplain.jpg"), index_path(@style) %>
+  <body style="width:100%; margin:0px; padding:0px" >
+      <div class="myHeader" >
+        <div style="display: block" width="100%" height="100%" text-decoration="none";>
+            <%= link_to "Welcome To My Website", index_path(@style), :class => "bigImageLink shiny" %>
                 
         </div>
+        </div>
+    <div class="main">
+
         <div class="tab">
             <%= link_to 'About', about_path(@style), :class => "tablinks_major"%>
             <%= link_to 'Contact', contact_path(@style), :class => "tablinks_major" %>
             <%= link_to 'Calculator', calculator_path(@style), :class => "tablinks_major" %>
+            <%= link_to 'Pottery', pottery_path(@style), :class => "tablinks_major" %>
+            <%= link_to 'Errata', errata_path(@style), :class => "tablinks_major" %>
             
         </div>
-    </div> 
+
       <div class="mainPart">
 
     <%= yield %>
            </div>
         
       </div>
-      <div class="footer">
-          <%= link_to 'Login', :action=>"login", :controller=>"main", :style=>@style  %>
-      </div>
+<div class="footer">
+    <div class="importantText">
+        
+    
+    Like the picture? ;)
+        </div>
+    <br>
+    
+          <%= link_to 'Login', login_path(@style), :class => "footer"  %>
+      </div> 
   </body>
 </html>
